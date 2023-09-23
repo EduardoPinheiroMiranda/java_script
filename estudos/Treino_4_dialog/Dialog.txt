@@ -1,0 +1,3 @@
+Estes arquivos servem para testar as funcionalidades da tag <dialog>
+dentro do HTML. Está é uma tag capaz de criar um modal(popup) dinamicamente
+de uma forma muita mais simplificada.

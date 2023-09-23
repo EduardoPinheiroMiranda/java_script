@@ -1,0 +1,221 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+}
+body{
+  background-color:rgb(240,240,240);
+
+  display: grid;
+  place-items: center;
+  
+}
+
+
+.page{
+  background-color: white;
+
+  width: 35rem;
+  border-radius: 1rem;
+  margin: 3rem auto;
+
+ 
+}
+
+main{
+  position: relative;
+}
+
+main .card_body{
+  padding: 2rem;
+  border-radius: 1rem;
+  display: grid;
+}
+
+main .card{
+  height: 35rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+}
+
+main .social{
+  display: flex;
+  gap: 2rem;
+}
+
+.social a{
+  background-color: white;
+  font-size: 1.2rem;
+
+  display: grid;
+  place-items: center;
+
+  width: 2rem;
+  padding: 0.3rem;
+
+  border-radius: 100%;
+  box-shadow: .1px .1px 4px black;
+  cursor: pointer;
+}
+.social a:nth-child(1){
+  color: #3b5998;
+}
+.social a:nth-child(3){
+  color:#0e76a8;
+}
+
+main p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+main form{
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+}
+
+form input{
+  background-color: rgb(240, 240, 240);
+  
+  padding: 0.8rem;
+  border: none;
+}
+form button{
+  background-color: rgb(46, 46, 207);
+  color: white;
+
+  width: 10rem;
+  padding: 0.6rem;
+
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+form button:hover{
+  background-color: rgb(26, 26, 255);
+}
+
+form a{
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+.instruction{
+  text-align: center;
+  font-weight: 600;
+
+  width: 25rem;
+
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+
+
+  animation-name: mostrarInstrucao;
+  animation-duration: 600ms;
+
+  transition: all 600ms;
+}
+.instruction button{
+  background-color: transparent;
+  color: white;
+
+  padding: 0.8rem;
+  border: 1px solid white;
+  border-radius: 2rem;
+
+  cursor: pointer;
+}
+.instruction button:hover{
+  background-color:  rgba(0,255,255,0.3);
+}
+
+.instruction p{
+  font-weight: 600;
+}
+
+.display{
+  transition: all 600ms;
+  display: none;
+  transform: translateX(2rem);
+  
+}
+
+.card_body .card:nth-child(2){
+  position: relative;
+}
+
+main .card_body:nth-child(2){
+  background: rgb(0,126,240);
+  background: linear-gradient(90deg, rgba(0,126,240,1) 0%, rgba(0,212,255,1) 100%, rgba(0,212,255,1) 100%, rgba(0,212,255,1) 100%, rgba(0,212,255,1) 100%);
+  color: white; 
+  
+  position: absolute;
+  top: 0rem;
+  width: 35rem;
+
+  transition: all 600ms;
+}
+
+.mover{
+  transform: translatey(35rem);
+}
+
+.ocultarInstrucao{
+  transition: all 600ms;
+  display: none;
+  transform: translatey(-5rem);
+  
+}
+
+@media(min-width:770px){
+  body{
+    height: 100vh;
+  }
+  .page{
+    width: 70rem;
+  }
+  main .card_body{
+    display: flex;
+  }
+  main .card{
+    width: 35rem;
+  }
+  .mover{
+    transform: translateX(35rem);
+  }
+  .ocultarInstrucao{
+    transform: translateY(-5rem);
+  }
+}
+
+
+
+@keyframes mostrarInstrucao{
+  0%{
+    opacity: 0;
+    transform: translatex(-2rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translatex(0rem);
+  }
+}
+
+
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa_digital</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/rifaAdminStyle.css">
+
+</head>
+<body>  
+
+    <h1> Rifa digital</h1>
+    <header>
+        <div id="menu">
+            <a href="/rifaAdmin"> <i class="bi bi-info-lg"></i> </a>
+            <a href="/alertDel"> <i class="bi bi-trash"></i> </a>
+            <a href="/ticketSort"> <i class="bi bi-shuffle"></i> </a>
+        </div>
+
+        <div id="body_rifa">
+
+                <%let cot=0; let aux=1;%>
+                <% for(let k=0; k<(cont/5); k++){%>
+
+                    <div class="line">
+                        
+                        <% for(let i=aux; i<=cont; i++){ %> <!--Representa os números da rifa-->
+                            
+                            <% for(let j=0; j<cont; j++){ %> <!--Representa os númerosjá vendidos-->
+                                
+                                <!--Fará uma comparação entre os números da rifa com os valores que já foram vendidos,
+                                fazendo a impressão da cartela distinguindo quais números estão a venda e quais estão disponíveis -->
+                                
+                                <% if(i==ticketBuy[j] && ticketStatus[j]=="vendido"){ %>
+                                    <a href="/confirmticket/<%=i%>"  class="vendido"> <div class="alin_text"> <%=i%> </div></a>
+                                    <% j=cont+1; cot=0%>
+                                <% }else if(i==ticketBuy[j] && ticketStatus[j]!="vendido"){ %>
+                                    <a href="/confirmticket/<%=i%>"  class="reservado"> <div class="alin_text"> <%=i%> </div></a>
+                                    <% j=cont+1; cot=0%>
+                                <% }else{ %>
+                                    <%cot = cot+1%>
+                                <% } %>
+
+                            <% } %>
+                            <!-- Caso o valor da rifa não tenha sido vendido, o valor de "cot" deve ser 
+                            igual ao de "cont" para imprimir o valor da rifa que não foi vendido-->
+                          
+                            <% if(cot==cont){ %>
+                                <a class="number"> <div class="alin_text"> <%=i%> </div></a>
+                                <% cot=0%>
+                            <% } %>
+                            <!-- ira auxiliar na criação de uma nova linha a cada 5 bilhetes apresentados-->
+                            <% if(i%5==0){ %>
+                                <% aux=i+1; i=cont+1%>
+                            <% } %>
+
+                        <% } %>
+                    </div>
+                <% } %>   
+        </div>
+    </header>
+
+    
+    <% if(!notOpem){ %>
+        <div class="formulario">
+            <div class="modal">
+
+                <div class="close" >
+                    <a href="/rifaAdmin"> <i class="bi bi-x"></i> </a>
+                </div>
+
+                <!--cabeçalho-->
+                <div id="res1">
+                    <p class="<%=client.buy%> " id="center"><%=client.bilhete%></p>
+                    <p id="winer"><%=client.buy%></p>
+                </div>
+
+                <!--corpo da informação-->
+                <div id="res2">
+                    <ul>
+                        <li>Nome: <%=client.nome%></li>
+                        <li>Email: <%=client.email%></li>
+                        <li>Cidade: <%=client.cidade%></li>
+                        <li>Endereço: <%=client.endereco%></li>
+                        <li>Telefone: <%=client.telefone%></li>
+                        <li>Data/hora: <%=client.dateBuy%></li>
+                    </ul>
+                </div>
+
+                <div class="conf"><!--opções de confirmação ou negação-->
+                    <a class="av" href="/buyConfirm/<%=client.bilhete%>">vendido</a>
+                    <a class="ar" href="/ticketDelete/<%=client.bilhete%>">retirar reserva</a>
+                </div>
+            </div>
+        </div>
+    <% } %>
+
+
+    <% if(!del){ %>
+        <div class="formulario">
+            <div class="modal">
+
+                <div class="close" >
+                    <a href="/rifaAdmin"> <i class="bi bi-x"></i> </a>
+                </div>
+
+                <div>
+                    <p>
+                        você quer apagar todos os dados dos clientes que compraram um bilhete ?
+        
+                </div>
+                <div class="conf">
+                    <a class="av" href="rifaDelite">sim</a>
+                    <a class="ar" href="/rifaAdmin">não</a>
+                </div>
+
+            </div>
+        </div>
+    <% } %>
+
+    <% if(!sort){ %>
+        <div class="formulario">
+            <div class="modal">
+                <div class="close" >
+                    <a href="/rifaAdmin"> <i class="bi bi-x"></i> </a>
+                </div>
+
+                <div>
+                    <% let v=0; let r=0 %>
+
+                        <% for(let i=0; i<ticketStatus.length; i++){ %>
+                            <% if(ticketStatus[i] == "vendido"){ %>
+                                <% v = v + 1 %>
+                            <% }else{ %>
+                                <% r = r + 1 %>
+                            <% } %>
+                        <% } %>
+                    <p>
+                        você já quer realizar o sorteio do vencedor ?
+                        por enquato foram vendidos <strong><%=v%></strong> bilhetes e ainda
+                        tem <strong><%=r%></strong> reservados ?
+                    </p>
+                </div>
+                <div class="conf">
+                    <a class="av" href="sortWiner">sim</a>
+                    <a class="ar" href="/rifaAdmin">não</a>
+                </div>
+
+            </div>
+        </div>
+    <% } %>
+
+    <% if(!winer){ %>
+        <div class="formulario">
+            <div class="modal">
+                <div class="close" >
+                    <a href="/rifaAdmin"> <i class="bi bi-x"></i> </a>
+                </div>
+
+                <div id="win">
+                    <p id="winer">Vencedor!!</p> 
+                    <p id="vencedor"><%=Winer.nome%></p>
+                    <p id="numero" class="<%=Winer.buy%>"><%=Winer.bilhete%></p>
+                </div>
+
+            </div>
+        </div>
+    <% } %>
+
+</body>
+</html>

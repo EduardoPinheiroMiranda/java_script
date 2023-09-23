@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(219, 217, 217);
+}
+header{
+    text-align: center;
+}
+section{
+    box-shadow: -5px 5px 10px;
+    left: auto;
+    background-color: gray;
+    border-radius: 15px;
+    padding: auto;
+}
+div#apres{
+
+    margin: auto;
+    margin-top: 15px;
+    padding: 15px;
+}
+div#res{
+    box-shadow: -5px 5px 10px;
+    text-align: center;
+    background-color: gray;
+    margin: auto;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    width: 100px;
+}
+
+input{
+    border-radius: 5px;
+}

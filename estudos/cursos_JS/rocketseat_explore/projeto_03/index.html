@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    
+    <link rel="stylesheet" href="projeto03.css">
+
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Crie e compartilhe seu evento.</h1>
+            <p>O primeiro passo é preencher esse formulario de incrição.  </p>
+        </header>
+    
+        
+        <form id="event" action="">
+            <fieldset>
+
+                <div class="container">
+                    <legend>Informações do Evento</legend>
+        
+                    <div class="input_dados">
+                        <label for="title">Titulo do evento <span>(minimo de 8 caracteres)</span></label>
+                        <input id="title" minlength="8" required type="text">
+                    </div>
+
+                    <div class="input_dados">
+                        <label for="link">Link do seu evento <span>(inicie com https://)</span></label>
+                        <input id="link" minlength="15" required type="url">
+                    </div>
+
+                    <div class="input_dados">
+                        <label for="contato"> Número para contato <span>(somente números)</span></label>
+                        <input id="contato" required type="tel">
+                    </div>
+
+                    <div class="input_dados">
+                        <label for="inf">Informações extras</label>
+                        <textarea id="inf" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="input_dados">
+                        <label for="categoria">categoria</label>
+                        <select id="categoria">
+                            <option value="teste1">teste1</option>
+                            <option value="teste2">teste2</option>
+                            <option value="teste3">teste3</option>
+                            <option value="teste4">teste4</option>
+                            <option value="teste5">teste5</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <div class="container">
+                    <legend>Privacidade</legend>
+
+                    <div class="input_dados">
+                        <label for="email"> E-mail de administrador <span>(exemplo@exemplo.com)</span></label>
+                        <input id="email" required type="email">
+                    </div>
+
+                    <div class="input_dados">
+                        <label for="senha"> Senha de administrador <span>(minimo de 8 caracteres)</span></label>
+                        <input id="senha" required minlength="8" type="password">
+                    </div>
+
+                    <div class="check_dado">
+                        <input id="check" type="checkbox">
+                        <label for="check">Evento privado</label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dia e hora</legend>
+                <div class="container-time">
+                    <div class="input_dados">
+                        <label for="date">Data</label>
+                        <input id="date" required type="date">
+                    </div>
+                    <div class="input_dados">
+                        <label for="time-begin">Inicio</label>
+                        <input id="time-begin" required type="time">
+                    </div>
+                    <div class="input_dados">
+                        <label for="time-end">Termino</label>
+                        <input id="time-end" required type="time">
+                    </div>
+
+                </div>
+            </fieldset>
+
+        </form>
+
+        <footer>
+            <input form="event" class="form_buttom" type="submit" value="Salvar evento" />
+        </footer>
+
+    </div>
+
+    
+</body>
+</html>

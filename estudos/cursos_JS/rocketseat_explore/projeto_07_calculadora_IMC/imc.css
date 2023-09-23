@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    font-size: 62.5%;
+
+    --colorBackground: #49b8c0;
+    --colorFont: #ffffff;
+    --colorContainer: #ffffff;
+    --colorInputs: #c9c9c9;
+    --colorLabel: #303030;
+    --colorButton: #0d73ad;
+}
+
+body{
+    background-color: var(--colorBackground);
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    background-color: var(--colorContainer);
+
+    max-width: 42rem;
+    padding: 5rem;
+
+    border-radius: .5rem;
+    box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.5);
+}
+
+form .title{
+    font-family: 'Roboto';
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+form label{
+    color: var(--colorLabel);
+    display: block;/*elemento do tipo inline*/
+
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+input{
+    background-color: var(--colorInputs);
+
+    width: 100%;
+    padding: 2rem 3rem;
+
+    border: none;
+    border-radius: 0.5rem;
+}
+
+input:focus{
+    outline: 2px solid #2fb6c0;
+}
+
+.input-wrapper + .input-wrapper{
+    margin-top: 2rem;
+}
+
+button{
+    background-color: var(--colorButton);
+    color: var(--colorFont);
+    width: 100%;
+    padding: 2rem;
+
+    margin: 3rem 0rem 1rem 0rem;
+
+    border: none;
+    border-radius: .5rem;
+}
+
+button:hover{
+    background-color: #3987b4;
+    cursor: pointer;
+}
+
+dialog{
+    background-color: var(--colorContainer);
+
+    width: 50rem;
+    padding: 2rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.3);
+
+}
+dialog .result{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+dialog .buttonClose{
+    font-size: 1.5rem;
+    margin-left: 95%;
+
+    cursor: pointer;
+}
+
+.alertClose{
+    display: none;
+    position: relative;
+}
+
+.notification{
+    background-color: #fc2222;
+    color: var(--colorFont);
+
+    padding: 1rem;
+    width: 60rem;
+    text-align: center;
+
+    position: absolute;
+    top: 0;
+
+    animation-name: activeAlert;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+.closeNotify{
+    position: absolute;
+    right: 2%;
+    top: 30%;
+
+    cursor: pointer;
+}
+
+
+
+
+
+@keyframes activeAlert{
+    0%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(0.5rem);
+    }
+}

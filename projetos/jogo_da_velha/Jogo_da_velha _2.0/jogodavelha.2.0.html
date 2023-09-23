@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha 2.0</title>
+            <link rel="stylesheet" href="jogodavelha.css">
+</head>
+<body>
+    <div>
+        <h1>Jogo da Velha</h1>
+          <div id=players>
+              <p1>Player</p1>
+                <p id="mensagen"></p>
+                <p id="jogador-azul"> Jogador 1: <input id="p1" type="text" ></p>
+                <p id="jogador-vermelho"> Jogador 2: <input id="p2" type="texte"></p>
+                <button onclick="start()" >Start</button>
+          </div>
+          <!--<a href="https://img.ibxk.com.br/2015/03/07/07090946399029.gif">ola</a>-->
+          <div id="tabuleiro">
+              <p id="JogadaErrada"></p>
+              <div id="pos1" onclick='pos1()' class='CordosBlocos'></div> 
+              <div id="pos2" onclick='pos2()' class='CordosBlocos'></div>
+              <div id="pos3" onclick='pos3()' class='CordosBlocos'></div>
+              <div id="pos4" onclick='pos4()' class='CordosBlocos'></div>
+              <div id="pos5" onclick='pos5()' class='CordosBlocos'></div>
+              <div id="pos6" onclick='pos6()' class='CordosBlocos'></div>
+              <div id="pos7" onclick='pos7()' class='CordosBlocos'></div>
+              <div id="pos8" onclick='pos8()' class='CordosBlocos'></div>
+              <div id="pos9" onclick='pos9()' class='CordosBlocos'></div>
+           </div>
+       </div>
+
+       <script src="jogo.js"></script>
+</body>
+</html>

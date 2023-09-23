@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+
+    <link rel="stylesheet" href="imc.css">
+    <script src="main.js" type="module" defer></script>
+
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <form>
+                <h1 class="title">Cálculo de IMC</h1>
+                <div class="input-wrapper">
+                    <label for="weight">Peso (kg)</label>
+                    <input type="text" id="weight" placeholder="50" />
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="height">Altura (cm)</label>
+                    <input type="text" id="height" placeholder="170cm">
+                </div>
+
+                <button>
+                    Calcular IMC <span><i class="bi bi-arrow-right"></i></span>
+                </button>
+                
+            </form>
+        </div>
+
+        <dialog >
+
+            <div class="buttonClose">
+                <i class="bi bi-x-lg closeModal"></i>
+            </div>
+
+            <div class="result">
+                <span>O seu imc é 28.</span>
+            </div>
+
+        </dialog>
+
+        <div class="alertClose">
+            <i class="bi bi-x-lg closeNotify"></i>
+            <h2>
+                Dados incompletos ou invalidos !
+            </h2>
+        </div>
+        
+    </main>
+   
+
+
+</body>
+</html>
+

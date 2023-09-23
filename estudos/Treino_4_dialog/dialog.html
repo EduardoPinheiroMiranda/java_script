@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dialog</title>
+    <link rel="stylesheet" href="dialog.css">
+</head>
+<body> 
+    <button id="opem">opem</button>
+
+    <dialog>
+        <p>
+            <a href="">x</a>
+            <form action="/insert/<%=ticket%>" method="post">
+                <p>Nome </p>
+                <input type="text"name="nome" placeholder="nome">
+                <p>E-mail </p>
+                <input type="text" name="email" placeholder="exemplo@gmail.com">
+                <p>Cidade </p>
+                <input type="text" name="city" placeholder="cidade">
+                <p>Endereço </p>
+                <input type="text" name="end" placeholder="rua, bairro, número">
+                <p>Telefone </p>
+                <input type="text" name="tel" placeholder="(DDD) + número">
+                <br>
+                <button id="butt" type="submit">confirmar</button>
+            </form>            
+        </p>
+    </dialog>
+
+
+    <script src="dialog.js"></script>
+</body>
+</html>

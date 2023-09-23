@@ -1,0 +1,28 @@
+{
+  "name": "project_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "migrate": "knex migrate:latest"
+  },
+  "author": "rocktcity",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "knex": "^2.5.1",
+    "msql": "^1.0.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1",
+    "sqlite": "^5.0.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

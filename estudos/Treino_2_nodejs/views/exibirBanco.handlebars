@@ -1,0 +1,8 @@
+<h1>Lista de Clientes: </h1>
+{{#each clientes}}
+    {{id}} : {{nome}} : {{numero}}<br>
+    
+    <a href="/apagar/{{id}}"> <button>apagar</button> </a>
+
+    <hr>
+{{/each}}

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --backgroundHeader: #00a2ff;
+    --fontColor: #ffffff;
+
+    font-size: 62.5%;
+}
+
+.page{
+    font-family: 'Roboto', sans-serif;
+    width: 50rem;
+    
+
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+header{
+    background-color: var(--backgroundHeader);
+    color: var(--fontColor);
+
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    border-radius: 1rem;
+
+    padding: 2rem;
+}
+
+header h1{
+    margin: 1rem 0rem;
+    font-size: 2.4rem;
+
+}
+
+form {
+    display: grid;
+    grid-template-areas: "a b " "c c" "d d";
+    gap: .3rem;
+}
+form div:nth-child(1){
+    grid-area: a;
+}
+form div:nth-child(2){
+    grid-area: b;
+}
+form div:nth-child(3){
+    grid-area: c;
+}
+
+form div{
+    display: grid;
+    text-align: left;
+}
+
+#subject{
+    border-top-left-radius: .5rem;
+}
+
+#date{
+    border-top-right-radius: .5rem;
+}
+
+form input, textarea{
+    height: 2.5rem;
+    padding: 0rem 1.5rem;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+form button{
+    grid-area: d;
+    padding: .5rem;
+
+    border: none;
+    border-radius: 0rem 0rem .5rem .5rem;
+
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #dadada;
+}
+
+
+.panel{
+    background-color: var(--backgroundHeader);
+    padding: .5rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+.dateEvent{
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.commitment {
+    font-size: 1.4rem;
+    padding: .5rem;
+
+    position: relative;
+}
+
+.showDescription{
+    transition: all 600ms;
+
+    margin-top: 1rem;
+    position: relative;
+    
+    animation-name: openDescription;
+    animation-duration: 1000ms;
+}
+
+.hide{
+    display: none;
+}
+
+.commitment:nth-child(even){
+    background-color: #6ac1f3;
+}
+.commitment:nth-child(odd){
+    background-color: #fff;
+}
+.commitmentPanel:nth-last-child(){
+    border-radius: 1rem;
+}
+
+.openDescription{
+    position: absolute;
+    left: 83%;
+
+    cursor: pointer;
+}
+
+.deliteCommit{
+    color: red;
+    position: absolute;
+    left: 93%;
+
+    cursor: pointer;
+}
+
+.close{
+    color: red;
+    position: absolute;
+    left: 94%;
+    cursor: pointer;
+}
+
+@keyframes openDescription {
+    0%{
+        transform: translateY(-1.5rem);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}

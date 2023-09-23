@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    background-color: gray;
+}
+#gif{
+    margin-top: -890px;
+}
+#botoes{
+    margin-top: 650px;
+}
+button{
+    margin-left: 20px;
+    border: none;
+    height: 25px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: rgb(209, 206, 206);
+}
+a{
+    color: black;
+    text-decoration: none;
+}

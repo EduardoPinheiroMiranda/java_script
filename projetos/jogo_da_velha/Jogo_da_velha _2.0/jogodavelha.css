@@ -1,0 +1,100 @@
+h1{
+  text-align:center;
+  color:white;
+}
+body{
+  background-image:linear-gradient(270deg,red,blue);
+}
+#JogadaErrada{
+  color: red;
+  font: 18pt;
+}
+#tabuleiro{
+    color:white;
+    border-radius: 15px;
+    width:500px;
+    padding:50px;
+    text-align: center;
+    margin-top:50px;
+    margin-inline: auto;
+}
+#pos1{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+}
+#pos2{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+    margin-left:150px;
+    margin-top:-60px;
+}
+#pos3{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+    margin-left:300px;
+    margin-top:-60px;
+}
+#pos4{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+    margin-top:40px;
+}
+#pos5{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+    margin-left:150px;
+    margin-top: -60px;
+}
+
+#pos6{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+    margin-left:300px;
+    margin-top:-60px
+}
+#pos7{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+    margin-top:40px;
+}
+#pos8{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+    margin-left:150px;
+    margin-top:-60px;
+}
+#pos9{
+    width:50px;
+    padding:30px;
+    border-radius:15px;
+    margin-left:300px;
+    margin-top:-60px;
+}
+#players{
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 20px;
+  text-align:center;
+  width:550px;
+  padding:20px;
+  margin-inline:auto;
+  color:white;
+}
+button{
+  border-radius:05px;
+  padding:05px;
+  width:100px;
+}
+#jogador-azul{
+  color:blue;
+}
+#jogador-vermelho{
+  color:red; 
+}

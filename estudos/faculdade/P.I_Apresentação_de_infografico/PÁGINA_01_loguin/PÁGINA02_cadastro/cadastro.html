@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project PI</title>
+        <link rel="stylesheet" href="cadastro.css">
+
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <fieldset>
+        <legend ><strong>Cadastro</strong></legend>
+        <div >
+            <p>Nome completo: <br>
+                <input id="nome" class="inf_entrada" type="text" required>
+                <div id="alerta_nome" class="aviso_erro"></div>
+            </p>
+        </div>
+
+        <div>
+            <p>E-mail:<br>
+                <input id="email" class="inf_entrada" type="email" required>
+                <div id="alerta_email" class="aviso_erro"></div>
+            </p>
+        </div>
+
+        <div >
+            <p>Data Nascimento:
+                <input id="data" type="date" required>
+                <div id="alerta_data" class="aviso_erro"></div>
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p>Nome de usuario: <br>
+                <input id="user_name"class="inf_entrada" type="text" required>
+                <div id="alerta_user" class="aviso_erro"></div>
+            </p>
+        </div>
+
+        <div>
+            <P>Senha: <br>
+                <input id="input_senha" class="inf_entrada"  type="password" required>
+                <i id="ver_senha" class="fa fa-eye" aria-hidden="true"></i>
+                <div id="alerta_senha" class="aviso_erro"></div>
+            </P>
+        </div>
+        <div>
+            <p>Confirmar Senha: <br>
+                <input id="conf_senha" class="inf_entrada"  type="password" required>
+                <i id="ver_conf_senha" class="fa fa-eye" aria-hidden="true"></i>
+                <div id="alerta_conf_senha" class="aviso_erro"></div>
+            </p>
+        </div>
+
+        <Div >
+                <button onclick="confirmar()">Confirmar</button>
+        </Div>
+
+    </fieldset>
+    
+        <script src="cadastro.js"></script>
+</body>
+</html> 

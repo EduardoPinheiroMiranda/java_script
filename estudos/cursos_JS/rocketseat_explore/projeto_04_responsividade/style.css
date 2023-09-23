@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+
+
+body{
+    background-color: #ece9fd;
+    padding: 8rem;
+    
+    
+}
+
+main{
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+main p:first-child{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+
+    margin-bottom: 1.7rem;
+    line-height: 3rem;
+}
+
+h1 + p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+h1{
+    font-family: 'Epilogue';
+    font-size: 4rem;
+}
+
+ul{
+    margin-top: 7rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul li{
+    list-style: none;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 3.2rem;
+
+    max-width: 25.5rem;
+
+    letter-spacing: -2px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+span{
+    font-weight: bolder;
+    font-size: 7.2rem;
+    line-height: 8rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+a:hover{
+    font-weight: 600;
+}
+
+
+@media (min-width: 50rem) {
+    main{
+        display: flex;
+        gap: 9rem;
+
+        max-width: 105rem;
+    }
+    
+    main > div {
+        max-width: 484px;
+    }
+
+    ul li{
+        gap: 2.5rem;
+        max-width: 450px;
+        align-items: center;
+    }
+   
+}

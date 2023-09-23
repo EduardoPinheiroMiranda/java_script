@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    background-color: gray;
+}
+#img_fundo{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+#gif{
+    margin-top: -401px;
+    margin-left: -611px;
+    position: relative;
+}
+#botoes{
+    margin-top: 1160px;
+}button{
+    margin-left: 20px;
+    border: none;
+    height: 25px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: rgb(209, 206, 206);
+}
+a{
+    color: black;
+    text-decoration: none;
+}

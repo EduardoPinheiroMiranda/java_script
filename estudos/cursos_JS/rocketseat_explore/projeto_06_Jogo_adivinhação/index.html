@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+    
+    <link rel="stylesheet" href="jogoAdivinhacao.css">
+
+</head>
+<body>
+
+    <main>
+        <div class="screenOne">
+            
+            <h1 id="title">Jogo da Adivinhação</h1>
+            <p id="notici">
+                Adivinhe em qual número estou pensando, é um número entre 0 e 10.</p>
+            <form>
+                <input type="number" id="guess">
+                <button id="attempt" type="button">tentar</button>
+            </form>
+            
+        </div>
+        
+        <div class="screenTwo hide">
+            <p>
+                Parabéns, você acerto em <strong><span id="attemptMade"></span></strong> tentativas !
+                O número que eu tinha pensado era o <strong><span id="numberLuck"></span></strong>.
+            </p>
+            <button id="reset">jogar novamente</button>
+        </div>
+    </main>
+
+    <script src="jogoAdivinhacao.js"></script>
+
+</body>
+</html>

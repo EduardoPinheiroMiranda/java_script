@@ -1,0 +1,15 @@
+section{
+    font: 20pt italic;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px;
+    padding: 10px;
+    width: 400px;
+    height: auto;
+}
+select{
+    width: 100px;
+}
+footer{
+    text-align: center;
+}

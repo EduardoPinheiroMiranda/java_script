@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino_3</title>
+
+        <link rel="stylesheet" href="teste.css">
+
+</head>
+<body>
+
+    <!--Problemas para apresentar os valores -->
+    <header>
+        <% if(task == null){%> <!-- esse task vem como parametro da rota rome para sempre entrar na validação do IF-->
+            <form action="/criarpost" method="post">
+                <input type="text" name="nome" placeholder="nome"><br>
+                <input type="number" name="valor" placeholder="valor"><br>
+                <button type="submit">confirmar</button>
+            </form>
+        <%}else{%>
+            <form action="/update/<%= task._id%>" method="post">
+                <input type="text" name="nome" value="<%= task.nome%>"> <br>
+                <input type="number" name="valor" value="<%= task.valor%>"><br>
+                <button type="submit">atualizar</button>
+            </form>
+        <%}%>
+    </header>
+
+    
+    <section id="tasks">
+        <ul>
+            <% tasklist.forEach((task) => { %>
+                <li>
+                    <%= task.nome %> : <%= task.valor %>
+                    <a href="/getById/<%= task._id%>/update">editar</a>
+                    <a href="/getById/<%= task._id%>/delete">deletar</a>
+                </li>
+            <% }) %>
+        </ul>
+    </section>
+    
+
+    <% if(taskdelete!=null){%>
+    <section id="del" >
+        <div id="conf">
+            <a href="/">x</a>
+            <p>Quer realmente apagar essa informação ?<br>
+                <%=taskdelete.nome%>:<%=taskdelete.valor%>
+            </p>
+            <a href="/delete/<%=taskdelete._id%>">sim</a>
+            <a href="/">não</a>
+        </div>
+    </section>
+    <%}%>
+
+    <script src="teste.js"></script>
+</body>
+</html>
