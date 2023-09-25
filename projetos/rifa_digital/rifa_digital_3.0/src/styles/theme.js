@@ -11,6 +11,6 @@ export default {
 
         gray_box: '#D9D9D9',
         gray_elips: '#A1A1A1',
-        gray_botton: '#ACACAC',
+        gray_button: '#ACACAC',
     }
 }

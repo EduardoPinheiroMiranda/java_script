@@ -10,6 +10,7 @@ export const Container = styled.button`
 
     border-radius: 0.5rem;
     border: 1px solid ${({ theme }) => theme.colors.blue};
+    cursor: pointer;
 
     >span{
         font-size: 1.6rem;
