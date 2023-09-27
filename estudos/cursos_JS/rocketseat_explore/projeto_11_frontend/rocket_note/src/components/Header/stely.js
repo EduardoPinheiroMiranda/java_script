@@ -18,7 +18,7 @@ export const Component = styled.header`
 
 `;
 
-export const Profile = styled.div`
+export const Perfil = styled.div`
     display: flex;
     align-items: center;
 

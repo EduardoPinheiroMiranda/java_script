@@ -1,16 +1,16 @@
 import { RiShutDownLine} from 'react-icons/ri'
-import {Component, Profile, Logout} from './stely'
+import {Component, Perfil, Logout} from './stely'
 
 export function Header(){
     return(
         <Component>
-            <Profile>
+            <Perfil>
                 <img src="https://github.com/eduardopinheiromiranda.png" alt="usuário" />
                 <div>
                     <span>Bem-vindo</span>
                     <strong>Eduardo Pinheiro Miranda</strong>
                 </div>
-            </Profile>
+            </Perfil>
 
             <Logout>
                 <RiShutDownLine/>

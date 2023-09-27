@@ -1,9 +1,9 @@
 import { Conteiner, Links, Content} from "./styles.js"
-import { Button } from "../../components/button/index.jsx"
-import { ButtonText } from "../../components/ButtonText/index.jsx"
-import { Header } from "../../components/header/index.jsx"
-import { Section } from "../../components/section/index.jsx"
-import { Tag } from "../../components/Tags/index.jsx"
+import { Button } from "../../components/button"
+import { ButtonText } from "../../components/ButtonText"
+import { Header } from "../../components/Header"
+import { Section } from "../../components/section"
+import { Tag } from "../../components/Tags"
 
 function Details(){
 
