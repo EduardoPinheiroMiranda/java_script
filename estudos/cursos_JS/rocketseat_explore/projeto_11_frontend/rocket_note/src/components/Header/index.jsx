@@ -4,7 +4,7 @@ import {Component, Perfil, Logout} from './stely'
 export function Header(){
     return(
         <Component>
-            <Perfil>
+            <Perfil to='/profile'>
                 <img src="https://github.com/eduardopinheiromiranda.png" alt="usuário" />
                 <div>
                     <span>Bem-vindo</span>

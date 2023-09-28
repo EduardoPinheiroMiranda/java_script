@@ -4,7 +4,7 @@ import { BsMailbox, BsLock} from 'react-icons/bs'
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 
-export function SignUp(){
+export function SignIn(){
     return(
         <Container>
             <Form>

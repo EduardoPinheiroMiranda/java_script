@@ -1,11 +1,11 @@
 import {Component} from './style'
 
-export function ButtonText({title, isActived, ...rest}){
+export function ButtonText({title, isActive = false, ...rest}){
     return(
         <Component 
-        type="button" 
-        {...rest} 
-        isActived = {isActived}
+            type="button" 
+            {...rest} 
+            isActive = {isActive}
         >
             {title}
         </Component>

@@ -1,11 +1,11 @@
 import { Conteiner, Links, Content} from "./styles.js"
-import { Button } from "../../components/button"
+import { Button } from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
 import { Header } from "../../components/Header"
-import { Section } from "../../components/section"
+import { Section } from "../../components/Section"
 import { Tag } from "../../components/Tags"
 
-function Details(){
+export function Details(){
 
   return(
       <Conteiner>
@@ -45,8 +45,4 @@ function Details(){
 
       </Conteiner>
   )
-}
-
-export{
-  Details
 }

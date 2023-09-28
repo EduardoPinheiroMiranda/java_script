@@ -1,12 +1,12 @@
-import { FiPlus, FiSearch } from 'react-icons/fi'
-
 import {Conteiner, Brand, Menu, Search, Content, NewNote } from './style'
 
+import { FiPlus, FiSearch } from 'react-icons/fi'
+
 import { Header} from '../../components/Header'
-import { ButtonText} from '../../components/ButtonText'
 import { Input } from '../../components/Input'
 import { Section } from '../../components/Section'
 import { Note } from '../../components/Note'
+import { ButtonText } from '../../components/ButtonText'
 
 export function Home(){
     return(
@@ -15,12 +15,12 @@ export function Home(){
                 <h1>Rocketnotes</h1>
             </Brand>
 
-            <Header/>
+            <Header to='/profile'/>
 
             <Menu>
-                <li><ButtonText isActived title='Todos'></ButtonText></li>
-                <li><ButtonText title='React'></ButtonText></li>
-                <li><ButtonText title='Sobre'></ButtonText></li>   
+                <li><ButtonText isActive title='Todos'/></li>
+                <li><ButtonText title='React'/></li>
+                <li><ButtonText title='Sobre'/></li> 
             </Menu>
 
             <Search>
@@ -39,7 +39,7 @@ export function Home(){
                 </Section>
             </Content>
 
-            <NewNote>
+            <NewNote to='/new'>
                 <FiPlus/>
                 Criar Nota
 
@@ -47,3 +47,9 @@ export function Home(){
         </Conteiner>
     )
 }
+
+/*
+                <li><ButtonText isactive='true' title='Todos'></ButtonText></li>
+                <li><ButtonText title='React'/></ButtonText></li>
+                <li><ButtonText title='Sobre'/></ButtonText></li>  
+*/

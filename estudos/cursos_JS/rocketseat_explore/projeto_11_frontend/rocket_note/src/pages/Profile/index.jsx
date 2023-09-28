@@ -2,6 +2,10 @@ import { Container, Form, Avatar} from './styled'
 
 import { BsArrowLeft, BsPerson, BsLock, BsMailbox, BsCamera} from 'react-icons/bs'
 
+import { Link } from 'react-router-dom'
+
+
+
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 
@@ -9,9 +13,9 @@ export function Profile(){
     return(
         <Container>
             <header>
-                <a href="/">
+                <Link to="/">
                     <BsArrowLeft/>
-                </a>
+                </Link>
             </header>
 
             <Form>

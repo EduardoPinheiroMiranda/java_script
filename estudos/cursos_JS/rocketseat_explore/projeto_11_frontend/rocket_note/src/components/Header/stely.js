@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 export const Component = styled.header`
     grid-area: header;
@@ -18,7 +19,7 @@ export const Component = styled.header`
 
 `;
 
-export const Perfil = styled.div`
+export const Perfil = styled(Link)`
     display: flex;
     align-items: center;
 
