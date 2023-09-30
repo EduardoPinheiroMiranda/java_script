@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
 
     width: 30rem;
-    height: 49.5rem;
+    height: 46rem;
 
     overflow-y: auto;
 
