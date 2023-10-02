@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.button`
-    background: transparent;
+    background: ${({ theme }) => theme.colors.white};
 
     width: 15rem;
     height: 3rem;

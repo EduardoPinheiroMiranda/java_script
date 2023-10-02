@@ -43,7 +43,6 @@ export function Sales(){
                                     <BsCircleFill/>
                                     <BsCircleFill/>
                                     <BsCircleFill/>
-
                                 </NextInfo>
                             </div>
                         </Section>
