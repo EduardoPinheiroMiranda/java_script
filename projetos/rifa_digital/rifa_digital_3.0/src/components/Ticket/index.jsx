@@ -1,6 +1,6 @@
-import { Container } from "./style";
+import { Container } from './style'
 
-export function Button({title}){
+export function Ticket({title}){
     return(
         <Container>
             <span>

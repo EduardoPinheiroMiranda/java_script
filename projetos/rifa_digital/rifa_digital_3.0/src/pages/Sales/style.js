@@ -25,6 +25,11 @@ export const Container = styled.div`
         }
     }
 
+    >div:nth-child(5){
+        position: absolute;
+        top: 0;
+    }
+
 `;
 
 export const Content = styled.div`

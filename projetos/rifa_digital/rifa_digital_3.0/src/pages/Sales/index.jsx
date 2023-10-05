@@ -4,7 +4,8 @@ import { BsPersonCircle, BsArrowRight, BsCircleFill } from "react-icons/bs";
 import { Logo } from '../../components/Logo';
 import { Button } from '../../components/Button';
 import { Subtitle } from '../../components/Subtitle';
-import { Tickt } from '../../components/Tickt';
+import { SectionTickets } from '../../components/SectionTickets';
+import { PopUp } from '../../components/PopUp';
 
 export function Sales(){
     return(
@@ -51,7 +52,7 @@ export function Sales(){
                     
                     <Subtitle/>
 
-                    <Tickt/>
+                    <SectionTickets/>
 
                 </Content>
 
@@ -61,6 +62,8 @@ export function Sales(){
             <Buy>
                 <Button title='Comprar'/>
             </Buy>
+
+            <PopUp/>
 
         </Container>
     )

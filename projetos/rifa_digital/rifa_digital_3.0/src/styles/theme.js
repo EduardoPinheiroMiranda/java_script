@@ -4,7 +4,9 @@ export default {
     colors :{
         blue: '#00A3D7',
         white: '#FFFFFF',
+        red: '#FF0101',
 
+        background: 'rgba(0, 0, 0, 0.30)',
 
         green: '#41C14E',
         orange: '#FFA800',
