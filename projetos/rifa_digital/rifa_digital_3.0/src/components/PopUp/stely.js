@@ -60,8 +60,6 @@ export const Section = styled.section`
 
     margin-top: 1rem;
 
-    border: 1px solid red;
-
     >span{
         font-size: 1.2rem;
         font-weight: 400;
@@ -72,6 +70,10 @@ export const Section = styled.section`
         
         display: flex;
         justify-content: space-between;
+
+        div{
+            background-color: ${({ theme }) => theme.colors.blue};
+        }
     }
     
 `

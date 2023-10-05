@@ -28,6 +28,8 @@ export const Container = styled.div`
     >div:nth-child(5){
         position: absolute;
         top: 0;
+
+        display: none;
     }
 
 `;
@@ -108,6 +110,20 @@ export const Section = styled.section`
 
 `
 
+export const SectionTickets = styled.div`
+    width: 30rem;
+    height: 43rem;
+
+    overflow-y: auto;
+
+    >div{
+        display: flex;
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+    }
+`
+
 export const NextInfo = styled.div`
 
     display: flex;
@@ -132,7 +148,6 @@ export const NextInfo = styled.div`
         color: ${({ theme }) => theme.colors.blue}
     }
 `
-
 
 export const Buy = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
