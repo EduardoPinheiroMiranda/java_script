@@ -15,7 +15,8 @@ const d = Math.sqrt(
 )
 console.log(`
     Questão 1: 
-    resultado ${d}`)
+    resultado ${d}
+`)
 
 
 /**
@@ -42,4 +43,71 @@ secundTimer/sday > 1 ? day = Math.floor(secundTimer/sday) : day = 0
 
 console.log(`
     Questão 2:
-    resposta: ${day}d : ${hour}h : ${minute}m : ${secund}s`)
+    resposta: ${day}d : ${hour}h : ${minute}m : ${secund}s
+`)
+
+/**
+ * 3. Calcule a média aritmética das 3 notas de um aluno e mostre, além do valor da média,
+    uma mensagem de "Aprovado", caso a média seja igual ou superior a 6, ou a mensagem
+    "Reprovado", caso contrário.
+ */
+
+const notas = [6,7,4]
+
+let total = 0
+
+notas.forEach((item) => {
+    total += item
+    
+})
+
+const media = total/3 
+
+media >= 6 ? 
+    console.log(`
+    Questão 3:
+    resultado: media do aluno: ${media.toFixed(1)}, aprovado
+    `) :
+    console.log(`
+    Questão 3:
+    resultado: media do aluno: ${media.toFixed(1)}, reprovado
+    `)
+
+/**
+ * 4. Elaborar um programa em Javascript que lê 2 valores a e b e os defina com a mensagem:
+    ‘São múltiplos’ ou ‘Não são múltiplos’.
+ */
+
+    const a = 33
+    const b = 30
+
+    a%b==0 ? 
+    console.log(`
+    Questão 4:
+    resposta: São multiplos
+    `) : 
+    console.log(`
+    Questão 4:
+    resposta: Não são multiplos
+    `)
+
+/**
+ * 5. Elabore um programa em Javascript que dada a idade de um nadador classifica-o em uma
+    das seguintes categorias:
+*/
+
+const idade = 9
+console.log(`
+Questão 5:
+resposta:`)
+
+idade >=5 && idade<=7 ? 
+    console.log("infatil A") :
+    idade >=8 &&  idade<=10 ? 
+            console.log("infantil B") :
+            idade >=11 &&  idade<=13 ? 
+                console.log("juvenil A") :
+                idade >=14 &&  idade<=17 ? 
+                    console.log("juvenil B") :
+                    idade >= 18 ? 
+                        console.log("adulto") : false
