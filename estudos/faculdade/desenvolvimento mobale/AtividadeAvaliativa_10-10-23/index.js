@@ -3,17 +3,18 @@
     quaisquer no plano, P (x1, y1) e P (x2, y2), escreva a distância entre eles. A fórmula que
     efetua tal cálculo é:
  */
+alert("Questão 1")
 
-const px1 = 4
-const py1 = 2
+const px1 = prompt('Digite o valor de Px1')
+const py1 = prompt('Digite o valor de Py1')
 
-const px2 = 2
-const py2 = 4
+const px2 = prompt('Digite o valor de Px2')
+const py2 = prompt('Digite o valor de Py2')
 
 const d = Math.sqrt(
     ((px2-px1)**2) + ((py2 - py1)**2)
 )
-console.log(`
+alert(`
     Questão 1: 
     resultado ${d}
 `)
@@ -24,7 +25,9 @@ console.log(`
     fábrica expressa em segundos e mostre-o expresso em horas, minutos e segundos.
  */
 
-const secundTimer = 155555
+const secundTimer = prompt(`
+    Questão 2: Quanto tempo esse evento durou na empresa ?
+`)
 
 let secund = 0
 let minute = 0
@@ -41,7 +44,7 @@ secundTimer/60 > 60 ? minute = (Math.floor(secundTimer/60)%60) : minute = Math.f
 secundTimer/shour > 25 ? hour = (Math.floor(secundTimer/shour)%24) : hour = Math.floor(secundTimer/shour)
 secundTimer/sday > 1 ? day = Math.floor(secundTimer/sday) : day = 0
 
-console.log(`
+alert(`
     Questão 2:
     resposta: ${day}d : ${hour}h : ${minute}m : ${secund}s
 `)
@@ -52,7 +55,11 @@ console.log(`
     "Reprovado", caso contrário.
  */
 
-const notas = [6,7,4]
+let notas = []
+alert("questão 3:")
+notas.push(Number(prompt("Qual a primeira nota ?")))
+notas.push(Number(prompt("Qual a segunda nota ?")))
+notas.push(Number(prompt("Qual a teceira nota ?")))
 
 let total = 0
 
@@ -64,11 +71,11 @@ notas.forEach((item) => {
 const media = total/3 
 
 media >= 6 ? 
-    console.log(`
+    alert(`
     Questão 3:
     resultado: media do aluno: ${media.toFixed(1)}, aprovado
     `) :
-    console.log(`
+    alert(`
     Questão 3:
     resultado: media do aluno: ${media.toFixed(1)}, reprovado
     `)
@@ -77,16 +84,16 @@ media >= 6 ?
  * 4. Elaborar um programa em Javascript que lê 2 valores a e b e os defina com a mensagem:
     ‘São múltiplos’ ou ‘Não são múltiplos’.
  */
+    alert("Questão 4:")
+    const a = prompt("Qual o valor de A ?")
+    const b = prompt("Qual o valor de B ?")
 
-    const a = 33
-    const b = 30
-
-    a%b==0 ? 
-    console.log(`
+    a%b==0 || b%a==0? 
+    alert(`
     Questão 4:
     resposta: São multiplos
     `) : 
-    console.log(`
+    alert(`
     Questão 4:
     resposta: Não são multiplos
     `)
@@ -96,18 +103,25 @@ media >= 6 ?
     das seguintes categorias:
 */
 
-const idade = 9
-console.log(`
-Questão 5:
-resposta:`)
+const idade = prompt("Qual a idade do aluno ?")
 
 idade >=5 && idade<=7 ? 
-    console.log("infatil A") :
+alert(`
+Questão 5:
+resposta: infantil A`) :
     idade >=8 &&  idade<=10 ? 
-            console.log("infantil B") :
+    alert(`
+    Questão 5:
+    resposta: infantil B`) :
             idade >=11 &&  idade<=13 ? 
-                console.log("juvenil A") :
+            alert(`
+            Questão 5:
+            resposta: juvenil A`) :
                 idade >=14 &&  idade<=17 ? 
-                    console.log("juvenil B") :
+                alert(`
+                Questão 5:
+                resposta: juvenil B`) :
                     idade >= 18 ? 
-                        console.log("adulto") : false
+                    alert(`
+                    Questão 5:
+                    resposta: adulto`) : false
