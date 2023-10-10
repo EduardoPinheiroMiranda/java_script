@@ -1,8 +1,8 @@
 import { Container } from './style'
 
-export function Input({placeholder}){
+export function Input({type, placeholder, ...rest}){
     return(
-        <Container placeholder={placeholder}>
+        <Container type={type} placeholder={placeholder}>
 
         </Container>
     )
