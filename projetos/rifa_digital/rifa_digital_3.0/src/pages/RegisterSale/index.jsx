@@ -1,4 +1,4 @@
-import { Container, Register, PaymentStep , ConfirmSale} from './style'
+import { Container, Register, PaymentStep , ConfirmSale, FinishBuy} from './style'
 
 import { BsFiles } from 'react-icons/bs'
 
@@ -52,9 +52,18 @@ export function RegisterSale(){
                         <div>hgcucucftfctfcfc</div> 
                         <BsFiles/>
                     </div>
-                    
-
                 </ConfirmSale>
+
+                <FinishBuy>
+                    <div>
+                        <p>Parabéns você acabou de reservar seus números da sorte !</p>
+                        <p>
+                            A validação da compra é realizada em até 48h! 
+                            Por favor aguarde a validação pacientimente e tenha uma boa sorte !
+                            :D
+                        </p>
+                    </div>
+                </FinishBuy>
             </main>
 
             <footer>
@@ -64,3 +73,4 @@ export function RegisterSale(){
         </Container>
     )
 }
+

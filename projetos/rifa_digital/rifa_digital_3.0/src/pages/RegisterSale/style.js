@@ -166,3 +166,7 @@ export const ConfirmSale = styled.div`
 
 
 `
+
+export const FinishBuy = styled.dialog`
+
+`
