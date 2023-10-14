@@ -2,7 +2,7 @@ import { Container, BodyPopUp, Section} from './stely'
 
 import { BsXLg } from 'react-icons/bs'
 
-import { Button } from '../Button'
+import { Button } from '../Button/Button'
 import { Ticket } from '../Ticket'
 
 export function PopUp(){
