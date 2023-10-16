@@ -161,6 +161,7 @@ export function Sales(){
                     </SectionTickets>
 
                 </Content>
+                
 
             </main>
             
