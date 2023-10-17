@@ -86,9 +86,11 @@ export class Elevador extends LoadData{
         if(GoToLevel > this.levelStop){
             console.log("Iniciar verificação de peso para subir")
             finish()
+            console.log(this.levelStop)
         }else{
             console.log("Iniciar verificação de peso para descer")
             finish()
+            console.log(this.levelStop)
         }
 
     }
@@ -100,15 +102,17 @@ export class Elevador extends LoadData{
         let GoToLevel 
 
         start.forEach((item) => {
-
-
+            const level = this.levelMax
 
             item.addEventListener("click", function start(){
-
-                if(this.levelStop == Number(item.textContent) || this.levelMax < Number(item.textContent) || Number(item.textContent) < 0){
+              
+                if( Number(item.textContent) > level || Number(item.textContent) < 0){
                     console.log("faz nada seu sem serviço")
                     return
                 }
+
+                addPeople.classList.remove("hide")
+                finish.classList.remove("hide")
 
                 GoToLevel = Number(item.textContent) 
             })
@@ -131,11 +135,12 @@ export class Elevador extends LoadData{
         finish.addEventListener("click", () => {
             this.load()
             this.ToMove(GoToLevel)
+
+            addPeople.classList.add("hide")
+            finish.classList.add("hide")
             
         })
         
-        
-
     }
 
     RemovePeople(i){
