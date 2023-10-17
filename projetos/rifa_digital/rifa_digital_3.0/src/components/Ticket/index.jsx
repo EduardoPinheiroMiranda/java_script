@@ -1,8 +1,8 @@
 import { Container } from './style'
 
-export function Ticket({title}){
+export function Ticket({title, ...rest}){
     return(
-        <Container>
+        <Container {...rest}>
             <span>
                 {title}
             </span>

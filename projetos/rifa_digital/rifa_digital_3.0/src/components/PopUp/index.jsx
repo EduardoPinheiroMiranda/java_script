@@ -5,9 +5,9 @@ import { BsXLg } from 'react-icons/bs'
 import { Button } from '../Button/Button'
 import { Ticket } from '../Ticket'
 
-export function PopUp(){
+export function PopUp({...rest}){
     return(
-        <Container>
+        <Container {...rest}>
             <BodyPopUp>
                 <BsXLg/>
                 <h1>Revisão</h1>
