@@ -1,0 +1,29 @@
+Enunciado
+    *Atualmente a dti possui dois escritórios (Place e Garden) localizados em dois prédios
+        diferentes. A empresa dona dos dois prédios pediu para que a dti desenvolvesse um
+        sistema para controlar o elevador de cada um dos prédios.
+
+Especificações
+        * O sistema deve possuir a função de subir ou descer um andar.
+
+        * O sistema deve possuir a função de adicionar ou remover uma pessoa do elevador.
+
+        * O sistema pode permitir que o elevador tenha uma carga maior do que a sua carga
+            máxima. Mas nesse caso deve ser emitido um aviso e ele não poderá se
+            movimentar até que a carga se normalize.
+
+        * O elevador começará sua operação no andar 0 (térreo) e sem pessoas dentro dele.
+
+        * O elevador não pode ir abaixo do andar 0 ou acima do último andar. Nesse caso
+            nada deverá ocorrer ao receber o comando.
+
+    Adaptações
+        *Só será controlado um elevador por vez. Mas o sistema deve ser capaz de se
+            adaptar à diferentes elevadores (diferente número de andares ou carga máxima).
+            
+        *A cada comando dado ao elevador, o sistema deverá mostrar na tela o andar em
+            que o elevador está, o nome das pessoas que estão nele e a carga atual dele.
+
+    Dicas
+        *Crie uma classe para as pessoas (nome e peso) e uma classe para o elevador (carga
+        máxima e número de andares).
