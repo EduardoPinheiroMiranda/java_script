@@ -1,17 +1,31 @@
 import Styled from "styled-components";
 
 export const Container = Styled.div`
-    border: 1px solid red;
 
-    width: 100%;
+    width: 30rem;
     height: 43rem;
 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    overflow: auto;
+
     margin-bottom: 2.2rem;
+
+    .selectNumber{
+        background-color: ${({ theme }) => theme.colors.blue};
+    }
+
+    .vendido{
+        background-color: ${({ theme }) => theme.colors.green};
+        cursor: auto;
+    }
+
+    .reservado{
+        background-color: ${({ theme }) => theme.colors.orange};
+        cursor: auto;
+    }
 `
 
-export const TicketLine = Styled.div`
-    display: flex;
-    gap: 2.5rem;
-    margin-bottom: 2.5rem;
-    cursor: pointer;
-`

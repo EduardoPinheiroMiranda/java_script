@@ -16,6 +16,8 @@ export const Container = styled.div`
 
         padding: 0 0.5rem;
 
+        cursor: pointer;
+
         >span{
             font-family: 'Roboto', sans-serif;
             font-size: 1.6rem;

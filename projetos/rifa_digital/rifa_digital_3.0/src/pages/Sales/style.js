@@ -52,11 +52,9 @@ export const Buy = styled.div`
     width: 100%;
     height: 5rem;
 
-    //border: 1px solid ${({ theme }) => theme.colors.blue};
+    border-top: 1px solid ${({ theme }) => theme.colors.blue};
 
     display: grid;
     place-items: center;
 
-    
-    
 `
