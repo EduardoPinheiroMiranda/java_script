@@ -2,7 +2,7 @@ import { Container } from "./style";
 
 import { Ticket } from '../../../../components/Ticket'
 
-const sizeRaffle = 500
+const sizeRaffle = 50
 const raffle = []
 
 const numbersSold = [
@@ -66,10 +66,6 @@ numbersSold.forEach((number) => {
     })
 })
 
-
-
-
-
 export function Sectionticket(){
     
     function selectNumber(numberLuck){
@@ -78,6 +74,7 @@ export function Sectionticket(){
         tickets.forEach((item) => {
             if(item.textContent == numberLuck){
                 item.classList.add("selectNumber")
+                item.classList.remove("ticket")
             }
         })
     }

@@ -6,11 +6,6 @@ export const Container = styled.div`
     .hide{
         display: none;
     }
-
-    .popUp{
-        position: absolute;
-        top: 0;
-    }
     
 `;
 
@@ -19,6 +14,8 @@ export const Page = styled.div`
     height: 100vh; 
 
     position: relative;
+
+    
 
     >header{
         width: 100%;
@@ -56,5 +53,6 @@ export const Buy = styled.div`
 
     display: grid;
     place-items: center;
+
 
 `
