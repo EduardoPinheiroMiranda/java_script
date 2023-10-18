@@ -2,7 +2,7 @@ import { Container } from './style'
 
 export function Ticket({title, ...rest}){
     return(
-        <Container {...rest}>
+        <Container className='ticket' {...rest}>
             <span>
                 {title}
             </span>
