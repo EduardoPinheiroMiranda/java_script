@@ -77,7 +77,6 @@ export function Sectionticket(){
                 
                 console.log(item.textContent)
             }
-            // console.log(item)
            
         })
     }
