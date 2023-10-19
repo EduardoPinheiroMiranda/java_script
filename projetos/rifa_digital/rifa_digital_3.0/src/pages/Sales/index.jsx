@@ -12,10 +12,14 @@ import { Sectionticket } from './Elements/SectionTicket';
 import { PopUpBody } from './Elements/PopUpBody'
 
 export function Sales(){
-   
+    const tickets = document.querySelectorAll('.selectNumber')
+    const buttonBuy = document.querySelector('.buttonBuy')
+
+    if(tickets){
+        buttonBuy.classList.add("buttonActive")
+    }
     function buy(){
-        const popUp = document.querySelector(".popUp")
-        popUp.classList.remove("hide")
+        
     }
 
     return(
@@ -42,12 +46,12 @@ export function Sales(){
                 </main>
                 
                 <Buy>
-                    <Button onClick={buy} title='Comprar'/>
+                    <Button className='buttonBuy' title='Comprar'/>
                 </Buy>
 
             </Page>
             
-            <PopUpBody/>
+            <PopUpBody className='hide'/>
 
         </Container>
     )

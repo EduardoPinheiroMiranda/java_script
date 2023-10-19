@@ -54,5 +54,10 @@ export const Buy = styled.div`
     display: grid;
     place-items: center;
 
+    .buttonActive{
+        background-color: ${({ theme }) => theme.colors.blue};
+        color: ${({ theme }) => theme.colors.white};
+    }
+
 
 `
