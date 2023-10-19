@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.button`
     background: ${({ theme }) => theme.colors.white};
-
+    color: ${({ theme }) => theme.colors.blue};
+    
     width: 15rem;
     height: 3rem;
 
@@ -10,14 +11,13 @@ export const Container = styled.button`
 
     border-radius: 0.5rem;
     border: 1px solid ${({ theme }) => theme.colors.blue};
-    cursor: pointer;
 
     >span{
         font-size: 1.6rem;
         font-family: 'Roboto', sans-serif;
         font-weight: 600;
 
-        color: ${({ theme }) => theme.colors.blue};
+        
     }
     
 `

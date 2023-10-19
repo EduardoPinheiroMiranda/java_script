@@ -11,7 +11,6 @@ export const Container = Styled.div`
     gap: 2rem;
 
     overflow: auto;
-
     margin-bottom: 2.2rem;
 
     .selectNumber{

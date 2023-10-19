@@ -13,10 +13,6 @@ import { PopUpBody } from './Elements/PopUpBody'
 
 export function Sales(){
    
-    function buy(){
-        const popUp = document.querySelector(".popUp")
-        popUp.classList.remove("hide")
-    }
 
     return(
         <Container>
@@ -42,12 +38,12 @@ export function Sales(){
                 </main>
                 
                 <Buy>
-                    <Button onClick={buy} title='Comprar'/>
+                    <Button className='buttonDesabled' title='Comprar'/>
                 </Buy>
 
             </Page>
             
-            <PopUpBody/>
+            <PopUpBody />
 
         </Container>
     )

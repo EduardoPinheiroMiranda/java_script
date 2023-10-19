@@ -11,6 +11,8 @@ export const Container = styled.div`
     border-radius: 0.5rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
+    text-align: center;
+    
     position: relative;
     
     >svg{
@@ -22,6 +24,8 @@ export const Container = styled.div`
         position: absolute;
         top: 1rem;
         right: 1rem;
+
+        cursor: pointer;
     }
 
     >button{
