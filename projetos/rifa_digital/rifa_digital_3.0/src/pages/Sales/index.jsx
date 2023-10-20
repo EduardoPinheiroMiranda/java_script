@@ -1,15 +1,15 @@
-import { Container, Page, Buy} from './style'
+import { Container, Page, Buy} from "./style"
 
 import { BsPersonCircle } from "react-icons/bs";
 
-import { Logo } from '../../components/Logo';
-import { Button } from '../../components/Button/Button';
-import { Subtitle } from '../../components/Subtitle';
+import { Logo } from "../../components/Logo";
+import { Button } from "../../components/Button/Button";
+import { Subtitle } from "../../components/Subtitle";
 
 
-import { Description } from './Elements/Description';
-import { Sectionticket } from './Elements/SectionTicket';
-import { PopUpBody } from './Elements/PopUpBody'
+import { Description } from "./Elements/Description";
+import { Sectionticket } from "./Elements/SectionTicket";
+import { PopUpBody } from "./Elements/PopUpBody"
 
 export function Sales(){
    
@@ -21,7 +21,7 @@ export function Sales(){
                 <header>
                     <Logo/>
 
-                    <div className='login'>
+                    <div className="login">
                         <BsPersonCircle/>
                     </div>
                     
@@ -38,12 +38,12 @@ export function Sales(){
                 </main>
                 
                 <Buy>
-                    <Button className='buttonDesabled' title='Comprar'/>
+                    <Button className="buttonDesabled" title="Comprar"/>
                 </Buy>
 
             </Page>
             
-            <PopUpBody className="hide"/>
+            <PopUpBody/>
 
         </Container>
     )

@@ -17,12 +17,12 @@ export const Container = Styled.div`
         background-color: ${({ theme }) => theme.colors.blue};
     }
 
-    .vendido{
+    .sold{
         background-color: ${({ theme }) => theme.colors.green};
         cursor: auto;
     }
 
-    .reservado{
+    .reserved{
         background-color: ${({ theme }) => theme.colors.orange};
         cursor: auto;
     }

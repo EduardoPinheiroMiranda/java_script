@@ -8,43 +8,43 @@ const raffle = []
 const numbersSold = [
     {
         number: 14,
-        status: "reservado",
+        status: "reserved",
     },
     {
         number: 13,
-        status: "reservado",
+        status: "reserved",
     },
     {
         number: 22,
-        status: "vendido",
+        status: "sold",
     },
     {
         number: 12,
-        status: "reservado",
+        status: "reserved",
     },
     {
         number: 30,
-        status: "reservado",
+        status: "reserved",
     },
     {
         number: 34,
-        status: "vendido",
+        status: "sold",
     },
     {
         number: 43,
-        status: "reservado",
+        status: "reserved",
     },
     {
         number: 2,
-        status: "vendido",
+        status: "sold",
     },
     {
         number: 15,
-        status: "reservado",
+        status: "reserved",
     },
     {
         number: 39,
-        status: "reservado",
+        status: "reserved",
     }
 ]
 
@@ -52,7 +52,7 @@ for(let i=0; i<sizeRaffle; i++){
     raffle.push(
         {
             number: i+1,
-            status: 'ticket'
+            status: "available"
         }
     )
 }
@@ -67,17 +67,23 @@ numbersSold.forEach((number) => {
 })
 
 export function Sectionticket(){
+   
 
-    function giveUpTicket(numberLuck){
+    function giveUpTicket(event){
+        const numberLuck = Number(event.target.textContent)
         const selectNumbers = document.querySelectorAll(".selectNumber")
 
         selectNumbers.forEach((item) => {
             if(item.textContent == numberLuck){
-                //item.classList.add("ticket")
+
+                item.classList.add("available")
+                item.classList.remove("selectNumber")
+
+                item.removeEventListener("click", giveUpTicket)
+                item.addEventListener("click", selectNumber)
                 
-                console.log(item.textContent)
+                ActiveButton()
             }
-           
         })
     }
 
@@ -85,7 +91,7 @@ export function Sectionticket(){
         const ticketsSelects = document.querySelectorAll(".selectNumber")
         const buttonActive = document.querySelector(".buttonActive")
 
-        if(ticketsSelects.length == 1 && !buttonActive){
+        if(!buttonActive){
             const button = document.querySelector(".buttonDesabled")
 
             button.classList.add("buttonActive")
@@ -97,38 +103,47 @@ export function Sectionticket(){
             })
         }
 
-        if(!ticketsSelects){
-            const buttonActive = ducment.querySelector(".buttonActive")
-            buttonActive.classList.add("buttonActive")
+        if(ticketsSelects.length == 0){
+
+            buttonActive.classList.add("buttonDesabled")
+            buttonActive.classList.remove("buttonActive")
+
         }
     }
     
 
-    function selectNumber(numberLuck){
-        console.log(numberLuck)
+    function selectNumber(event){
+        const numberLuck = Number(event.target.textContent)
+        const ticketAvaliable = document.querySelectorAll(".available")
         
-        //ActiveButton()
-        const ticketAvaliable = document.querySelectorAll(".ticket")
-        ticketAvaliable[numberLuck].removeEventListener("click", selectNumber)
-
+        ticketAvaliable.forEach((item) => {
+            if(item.textContent == numberLuck){
+                item.classList.remove("available")
+                item.classList.add("selectNumber")
+                
+                item.addEventListener("click", (event) => event.stopPropagation())
+                item.addEventListener("click", giveUpTicket, false)
+            }
+        })
+        
+        ActiveButton()
     }
     
     
-
-
     return(
         <Container>
             
                 {
                     raffle.map( (number) => {
 
-                        if(number.status == "ticket"){
+                        if(number.status == "available"){
+
                             return(
                                 <Ticket 
                                     key={number.number} 
                                     className={number.status}
                                     title={number.number}
-                                    onClick={() => selectNumber(number.number)}
+                                    onClick={selectNumber}
                                 />
                             )
                         }

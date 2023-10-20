@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const Container = styled.div`
     position: relative;
@@ -57,11 +57,7 @@ export const Buy = styled.div`
     .buttonActive{
         background-color: ${({ theme }) => theme.colors.blue};
         color: ${({ theme }) => theme.colors.white};
-<<<<<<< HEAD
-
         cursor: pointer;
-=======
->>>>>>> bc3bee9f412796dc127c5d65ebd2de240e86a4c7
     }
 
 

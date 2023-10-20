@@ -6,13 +6,14 @@ import { PopUp } from "../../../../components/PopUp"
 import { Button } from "../../../../components/Button/Button"
 
 export function PopUpBody({...rest}){
+
     function closePopUp(){
         const close = document.querySelector(".close")
         close.classList.add("hide")
     }
 
     return(
-        <Container className="close" {...rest}>
+        <Container className="close hide" {...rest}>
             <div>
                 <PopUp>
                     <BsXLg onClick={closePopUp}/>
