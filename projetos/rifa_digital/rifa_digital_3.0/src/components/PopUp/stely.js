@@ -20,7 +20,7 @@ export const Container = styled.div`
     >svg{
         color: ${({ theme }) => theme.colors.red};
 
-        width: 1rem;
+        width: 1em;
         height: 1rem;
 
         position: absolute;
