@@ -24,7 +24,11 @@ export function PopUpBody({...rest}){
                     <h1>Revisão</h1>
                     <h2>Números selecionaods</h2>
                     <SectionNumbers >
-                        
+                        <div>
+                            <div>
+                                
+                            </div>
+                        </div>
                     </SectionNumbers>
 
                     <Button title="Confirmar"/>
