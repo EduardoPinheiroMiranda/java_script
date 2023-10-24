@@ -1,7 +1,7 @@
 import { Container, Information, SignUp, LogIn } from './style'
 
 import { Input } from '../../components/input'
-import { Button } from '../../components/Button'
+import { Button } from '../../components/Button/Button'
 
 export function AccessPage(){
 

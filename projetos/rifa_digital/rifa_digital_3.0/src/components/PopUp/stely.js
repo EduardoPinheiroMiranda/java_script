@@ -30,15 +30,21 @@ export const Container = styled.div`
         cursor: pointer;
     }
 
-    >button{
-        background-color: ${({ theme }) => theme.colors.blue};
+    a{
+        button{
+            background-color: ${({ theme }) => theme.colors.blue};
 
-        position: absolute;
-        bottom: 1rem;
-        left: 5rem;
+            position: absolute;
+            bottom: 1rem;
+            left: 5rem;
 
-        span{
-            color: ${({ theme }) => theme.colors.white};
+            cursor: pointer;
+
+            span{
+                color: ${({ theme }) => theme.colors.white};
+            }
         }
     }
+
+    
 `

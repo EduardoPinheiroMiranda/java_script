@@ -31,6 +31,8 @@ export const Page = Styled.div`
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
                 margin-right: 0.5rem;
+
+                cursor: pointer;
             }
         }
     }

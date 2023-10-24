@@ -5,16 +5,13 @@ import GlobalStyle from './styles/global'
 import theme from './styles/theme'
 import { ThemeProvider } from 'styled-components'
 
-
-import { Sales } from './pages/Sales'
-//import { AccessPage } from './pages/accessPage'
-//import { RegisterSale } from './pages/RegisterSale'
+import { Routers } from './routers'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
-      <Sales/>
+      <Routers/>
     </ThemeProvider>
     
   </React.StrictMode>,

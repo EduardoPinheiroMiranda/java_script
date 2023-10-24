@@ -1,4 +1,5 @@
 import { Container, Page, Buy, BodyPopUp, SectionNumbers} from "./style"
+import { Link } from "react-router-dom";
 
 import { BsPersonCircle } from "react-icons/bs";
 import { BsXLg} from "react-icons/bs"
@@ -51,9 +52,9 @@ export function Sales(){
                 <header>
                     <Logo/>
 
-                    <div className="login">
+                    <Link to="/accesspage" className="login">
                         <BsPersonCircle/>
-                    </div>
+                    </Link>
                     
                 </header>
 
@@ -85,7 +86,10 @@ export function Sales(){
                         <SectionNumbers className="showNumbers">  
                         </SectionNumbers>
 
-                        <Button title="Confirmar"/>
+                        <Link to="/registersale">
+                            <Button title="Confirmar"/>
+                        </Link>
+                            
                         
                     </PopUp>
             </BodyPopUp>
