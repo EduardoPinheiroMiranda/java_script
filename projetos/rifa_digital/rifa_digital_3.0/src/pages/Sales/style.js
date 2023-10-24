@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import Styled from "styled-components"
 
-export const Container = styled.div`
+export const Container = Styled.div`
     position: relative;
 
     .hide{
@@ -9,13 +9,11 @@ export const Container = styled.div`
     
 `;
 
-export const Page = styled.div`
+export const Page = Styled.div`
     width: 100%;
     height: 100vh; 
 
     position: relative;
-
-    
 
     >header{
         width: 100%;
@@ -43,7 +41,7 @@ export const Page = styled.div`
     }
 `
 
-export const Buy = styled.div`
+export const Buy = Styled.div`
     background-color: ${({ theme }) => theme.colors.white};
 
     width: 100%;
@@ -61,4 +59,69 @@ export const Buy = styled.div`
     }
 
 
+`
+
+export const BodyPopUp = Styled.div`
+    font-family: 'Roboto', sans-serif;
+    
+    background-color: ${({ theme }) => theme.colors.background};
+
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    position: absolute;
+    top: 0;
+
+    h1{
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: 1rem 0 1rem 0;
+    }
+
+    h2{
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+`
+export const SectionNumbers = Styled.div`
+    height: 23rem;
+    width: 100%;
+
+    >div{
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+
+        .numberLuck{
+            background-color: ${({ theme }) => theme.colors.blue};
+            color: ${({ theme }) => theme.colors.white};
+
+            width: 4rem;
+            height: 4rem;
+
+            border-radius: 0.3rem;
+
+            display: grid;
+            justify-content: end;
+            align-items: end;
+
+            padding: 0 0.5rem;
+
+            cursor: pointer;
+
+            >span{
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+
+        }
+        
+    }
 `

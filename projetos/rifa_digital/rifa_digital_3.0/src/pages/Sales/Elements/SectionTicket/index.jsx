@@ -67,7 +67,11 @@ numbersSold.forEach((number) => {
 })
 
 export function Sectionticket(){
-   
+    
+    function showPopUp(){
+        const popUp = document.querySelector(".hide")
+        popUp.classList.remove("hide") 
+    }
 
     function giveUpTicket(event){
         const numberLuck = Number(event.target.textContent)
@@ -79,8 +83,8 @@ export function Sectionticket(){
                 item.classList.add("available")
                 item.classList.remove("selectNumber")
 
-                item.removeEventListener("click", giveUpTicket)
-                item.addEventListener("click", selectNumber)
+                item.removeEventListener("click", giveUpTicket, false)
+                item.addEventListener("click", selectNumber, false)
                 
                 ActiveButton()
             }
@@ -97,16 +101,15 @@ export function Sectionticket(){
             button.classList.add("buttonActive")
             button.classList.remove("buttonDesabled")
 
-            button.addEventListener("click", () => {
-                const popUp = document.querySelector(".hide")
-                popUp.classList.remove("hide")           
-            })
+            button.addEventListener("click", showPopUp, false)
         }
 
         if(ticketsSelects.length == 0){
 
             buttonActive.classList.add("buttonDesabled")
             buttonActive.classList.remove("buttonActive")
+
+            buttonActive.removeEventListener('click', showPopUp, false)
 
         }
     }
