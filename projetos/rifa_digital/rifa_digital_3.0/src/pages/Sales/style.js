@@ -89,14 +89,17 @@ export const BodyPopUp = Styled.div`
 
 `
 export const SectionNumbers = Styled.div`
-    height: 23rem;
     width: 100%;
+    >div{ 
+        height: 23rem;
+        
 
-    >div{
         display: flex;
         justify-content: center;
-        gap: 2.5rem;
+        gap: 2rem;
+        
         flex-wrap: wrap;
+        overflow-y: auto;
 
         .numberLuck{
             background-color: ${({ theme }) => theme.colors.blue};

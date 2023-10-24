@@ -7,47 +7,40 @@ import { Logo } from "../../components/Logo";
 import { Button } from "../../components/Button/Button";
 import { Subtitle } from "../../components/Subtitle";
 import { PopUp } from "../../components/PopUp";
-import { Ticket } from "../../components/Ticket";
 
 import { Description } from "./Elements/Description";
 import { Sectionticket } from "./Elements/SectionTicket";
-import { createElement } from "react";
-//import { PopUpBody } from "./Elements/PopUpBody"
 
 export function Sales(){
    
     function closePopUp(){
+        const showNumbersBody = document.querySelector(".showNumbers div")
         const close = document.querySelector(".close")
+
         close.classList.add("hide")
+        showNumbersBody.remove()
     }
-    
-
-    // function button(){
-    //     const selectNumbers = document.querySelectorAll(".selectNumber")
-    //     // if(selectNumbers){
-    //     //     ActiveButton()
-    //     // }
-
-    //     console.log(selectNumbers.length)
-    //     return 100;
-    // }
 
     function showSelectioNumbers(){
         const selectNumbers = document.querySelectorAll(".selectNumber")
-        const showNumbersBody = document.querySelector(".showNumbers")
-        const numbers = document.createElement("div")
-        let showNumber = `` 
         
-        selectNumbers.forEach((item) => {
-            showNumber += `
-                <div class="numberLuck">
-                    <span>${item.textContent}</span>
-                </div>`
-            
-        })
+        if(selectNumbers.length > 0){
 
-        numbers.innerHTML = showNumber
-        showNumbersBody.append(numbers)
+            const showNumbersBody = document.querySelector(".showNumbers")
+            const numbers = document.createElement("div")
+            let showNumber = `` 
+            
+            selectNumbers.forEach((item) => {
+                showNumber += `
+                    <div class="numberLuck">
+                        <span>${item.textContent}</span>
+                    </div>`
+                
+            })
+
+            numbers.innerHTML = showNumber
+            showNumbersBody.append(numbers)
+        }
         
     }
 
@@ -82,17 +75,15 @@ export function Sales(){
                 </Buy>
 
             </Page>
-
-            {/* <PopUpBody /> */}
             
-            <BodyPopUp className="hide">
+            <BodyPopUp className="close hide">
                 <PopUp>
                     <BsXLg onClick={closePopUp}/>
                         <h1>Revisão</h1>
                         <h2>Números selecionaods</h2>
-                            <SectionNumbers className="showNumbers">
-                                
-                            </SectionNumbers>
+
+                        <SectionNumbers className="showNumbers">  
+                        </SectionNumbers>
 
                         <Button title="Confirmar"/>
                         
