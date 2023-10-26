@@ -43,7 +43,7 @@ export function RegisterSale(){
                     <Input id='whatsApp' title='Nomne completo' type='text'/>
                 </Register>
 
-                <ConfirmSale>
+                <ConfirmSale className=''>
                     <h2>QRcode</h2>
                     <img src="https://s3-alpha-sig.figma.com/img/86dc/48f2/1c3a1850f136693a08057946a6cd51aa?Expires=1698019200&Signature=Ys02vpzU2QpcBHYrGHuDgdvTo0M40pKDito9M2zkac90xuprcSAKjSE8OhvJ36gGq0p9a4OwS48cn~qIDrVG6Oh1Cyn8d26Vp3fAc82-tnCuUzZQpc6EX-obl-cYswxv5ZkvOJZ1wyjklSla80hAewnyuM--2TgzSW6HXlCPJc3ERK9FN0mBBRRz7g4C~5O9hxv960uERYUElt35gBx~-TGK~CIA7BvTgsKtX32NX~X2PUXAyjeT7QCbSciGiBEBTu~nMbgZp8EBGD8xuE3iKq4sSmpnrpVZUs8aJpgg752FSZMJsqRaNzmNAUMOsxkgjJRXAmkOQq93BlaMDmXMmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="QRcode pix" />
                 
