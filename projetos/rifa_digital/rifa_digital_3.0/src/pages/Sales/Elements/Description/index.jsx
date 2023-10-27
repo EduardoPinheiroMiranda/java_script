@@ -13,7 +13,7 @@ export function Description(){
             </div>
 
             <Section>
-                <img src="https://scontent-gru2-1.xx.fbcdn.net/v/t1.18169-9/18527629_1202385809895002_1921898692436017206_n.png?_nc_cat=109&ccb=1-7&_nc_sid=9267fe&_nc_ohc=Lkf5ltY_nxgAX-x0vGY&_nc_oc=AQkTkVdpFiS3paAksxd2iNGmbr46WaqgjABf2d1dBOY-ELXMPDPPVJD582z1dV0ALxM756bu-IV8_05EOUZuD5nX&_nc_ht=scontent-gru2-1.xx&oh=00_AfAQNk61QeY6VmVeqseX9lbPkQG1QX6P4c9ZgZUBktMSVA&oe=6538D49E" alt="Consoiler PS4 slim" />
+                <img src="https://scontent.ftfl2-1.fna.fbcdn.net/v/t1.18169-9/18527629_1202385809895002_1921898692436017206_n.png?_nc_cat=109&ccb=1-7&_nc_sid=c2f564&_nc_ohc=GBOIo6dCeRcAX9LPKV-&_nc_oc=AQm6z6Wpal9E46KksdbFDaVcliFvbXgJXkxeAVJacOMz8Kcorit3Eh7mtpauf0EWues&_nc_ht=scontent.ftfl2-1.fna&oh=00_AfBgjXPvJhxjvLAE88rFmZw4a4xWe0E3Xwjtxvzghdrstw&oe=6561B31E" alt="Consoiler PS4 slim" />
         
                 <div>
                     <p>Descrição da rifa</p>

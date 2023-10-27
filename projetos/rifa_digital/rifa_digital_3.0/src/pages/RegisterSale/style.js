@@ -1,14 +1,18 @@
-import styled from "styled-components";
+import Styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = Styled.div`
     font-family: 'Roboto' , sans-serif;
+    
+`
 
+export const Page = Styled.div`
     width: 100%;
     height: 100vh;
 
     position: relative;
 
-    >main {
+     >main {
+
         nav{
             background-color: ${({ theme }) => theme.colors.blue};
             color: ${({ theme }) => theme.colors.white};
@@ -26,20 +30,9 @@ export const Container = styled.div`
             display: none;
         }
     }
-
-    >footer{
-        width: 100%;
-
-        display: flex;
-        justify-content: space-around;
-
-        position: absolute;
-        bottom: 5rem;
-    }
-    
 `
 
-export const PaymentStep = styled.div`
+export const PaymentStep = Styled.div`
     width: 30rem;
     height: 3.5rem;
 
@@ -82,91 +75,26 @@ export const PaymentStep = styled.div`
 
 `
 
-export const Register = styled.form`
-    margin-top: 8.6rem;
-    display: grid;
-    place-items: center;
+export const Content = Styled.div`
+    border: 1px solid red;
 
-    >label{
-        font-size: 1.2rem;
-        font-weight: 600;
+    width: 100%;
+    height: 60rem;
 
-        width: 9rem;
-        height: 2rem;
+    overflow-y: auto; 
+`
 
-        margin: 0 23rem 0 4rem;
+export const Navegation = Styled.div`
+    width: 100%;
 
+    display: flex;
+    justify-content: space-around;
 
-        display: block;
-        display: flex;
-        align-items: center;
-    }
-
-    >input{
-        margin: 0 4rem 2rem 7rem;
-    }
+    position: absolute;
+    bottom: 5rem;
     
 `
 
-export const ConfirmSale = styled.div`
-    width: 100%;
-
-    display: grid;
-
-    align-items: center;
-    place-items: center;
-
-
-    >h2{
-        font-size: 2rem;
-        font-weight: 600;
-
-        margin-top: 12.7rem;
-    }
-
-    >img{
-        width: 20rem;
-        height: 20rem;
-
-        margin-bottom: 5rem;
-    }
-
-    >div{
-        
-        font-size: 1.2rem;
-        font-weight: 600;
-
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-       
-
-        div{
-            font-weight: 400;
-
-            width: 20rem;
-            height: 2rem;
-            padding: 0 1rem;
-
-            display: flex;
-            align-items: center;
-
-            overflow: auto;
-
-            border: 1px solid ${({ theme }) => theme.colors.blue};
-        }
-
-        svg{
-            height: 2rem;
-            width: 2rem;
-        }
-    }
-
-
-
-`
-
-export const FinishBuy = styled.dialog`
+export const FinishBuy = Styled.dialog`
 
 `
