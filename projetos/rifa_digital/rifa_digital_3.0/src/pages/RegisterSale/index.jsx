@@ -1,8 +1,8 @@
-import { Container, Page, PaymentStep, Content, Navegation, FinishBuy} from './style'
+import { Container, Page, PaymentStep, Content, Navegation, FinishBuy} from "./style"
 
-import { Logo } from '../../components/Logo'
-import { ButtonBack } from '../../components/Button/ButtonBack'
-import { ButtonNext } from '../../components/Button/ButtonNext'
+import { Logo } from "../../components/Logo"
+import { ButtonBack } from "../../components/Button/ButtonBack"
+import { ButtonNext } from "../../components/Button/ButtonNext"
 
 
 
@@ -22,21 +22,21 @@ export function RegisterSale(){
                             <p>Registrar Bilhete</p>
                             <p>Pagamentos</p>
 
-                            <div className=''>  
+                            <div className="">  
                                 <p>Registrar bilhete</p>
                             </div>
                         </PaymentStep>
                     </nav>
 
                     <Content>
-                        <RegisterSale/>
+                        <Register/>
                     </Content>
                     
                 </main>
 
                 <Navegation>
-                    <ButtonBack title='voltar'/>
-                    <ButtonNext title='proximo'/>
+                    <ButtonBack title="voltar"/>
+                    <ButtonNext title="proximo"/>
                 </Navegation>
 
             </Page>

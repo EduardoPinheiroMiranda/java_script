@@ -76,12 +76,13 @@ export const PaymentStep = Styled.div`
 `
 
 export const Content = Styled.div`
-    border: 1px solid red;
+    
 
-    width: 100%;
+    width: 28rem;
     height: 60rem;
 
-    overflow-y: auto; 
+    margin: 0 auto;
+ 
 `
 
 export const Navegation = Styled.div`
