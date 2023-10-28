@@ -33,7 +33,6 @@ export function RegisterSale(){
                     </Content>
                     
                 </main>
-
                 <Navegation>
                     <ButtonBack title="voltar"/>
                     <ButtonNext title="proximo"/>
