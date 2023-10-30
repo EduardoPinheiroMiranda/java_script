@@ -42,6 +42,7 @@ export function RegisterSale(){
 
             <FinishBuy>
                 <div>
+                    
                     <p>Parabéns você acabou de reservar seus números da sorte !</p>
                     <p>
                         A validação da compra é realizada em até 48h! 
