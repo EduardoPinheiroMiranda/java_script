@@ -7,6 +7,7 @@ export default {
         red: '#FF0101',
 
         background: 'rgba(0, 0, 0, 0.30)',
+        outline: "#88E2FF",
 
         green: '#41C14E',
         orange: '#FFA800',

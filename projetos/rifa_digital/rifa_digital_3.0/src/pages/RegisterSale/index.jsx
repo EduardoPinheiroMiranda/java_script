@@ -7,8 +7,9 @@ import { ButtonNext } from "../../components/Button/ButtonNext"
 
 
 import { Register } from "./Elements/Register"
+import { ConfirmSale } from "./Elements/ConfirmSale"
 
-export function RegisterSale(){
+export function RegisterSale({...rest}){
     return(
         <Container>
             <Page>
@@ -30,17 +31,19 @@ export function RegisterSale(){
 
                     <Content>
                         <Register/>
+                        <ConfirmSale/>
+
                     </Content>
                     
                 </main>
                 <Navegation>
-                    <ButtonBack title="voltar"/>
+                    <ButtonBack title="voltar" router="/"/>
                     <ButtonNext title="proximo"/>
                 </Navegation>
 
             </Page>
 
-            <FinishBuy>
+            <FinishBuy className="hide">
                 <div>
                     
                     <p>Parabéns você acabou de reservar seus números da sorte !</p>

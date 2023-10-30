@@ -8,11 +8,19 @@ export const Container = Styled.div`
     margin-top: 2.5rem;
     margin-bottom: 3rem;
 
+    .hide{
+        display: none;
+    }
+`
+
+export const Content = Styled.div`
     >div{
         label{
             margin-top: 1rem;
             font-size: 1.2rem;
             font-weight: 600;
+
+            margin-bottom: 0.5rem;
 
             display: block;
         }
@@ -25,7 +33,7 @@ export const Container = Styled.div`
             
             margin: 0 0 0 3rem;
             
-            outline: none;
+            outline-color: ${({ theme }) => theme.colors.outline};
         }
 
         div{
@@ -34,7 +42,7 @@ export const Container = Styled.div`
             gap: 0 1.8rem;
             flex-wrap: wrap;
 
-            .fone{
+            .info{
                 display: grid;
 
                 input{
@@ -45,10 +53,10 @@ export const Container = Styled.div`
     }
 
     >hr{
-        color:red;
+        
+        border: 1px solid ${({ theme }) => theme.colors.blue};
         width: 15rem;
         margin: 3rem auto;
     }
-
 
 `

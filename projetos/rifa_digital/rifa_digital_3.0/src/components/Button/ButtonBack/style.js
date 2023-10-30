@@ -10,17 +10,22 @@ export const Container = styled.button`
     border: none;
     cursor: pointer;
 
-    >span{
-        font-size: 1.6rem;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
+    a{
+        text-decoration: none;
+        
+        >span{
+            font-size: 1.6rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
 
-        color: ${({ theme }) => theme.colors.white};
+            color: ${({ theme }) => theme.colors.white};
 
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        gap: 1rem;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: 1rem;
+        }
+
     }
 
 `

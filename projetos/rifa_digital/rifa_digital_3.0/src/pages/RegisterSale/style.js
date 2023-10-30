@@ -2,6 +2,10 @@ import Styled from "styled-components";
 
 export const Container = Styled.div`
     font-family: 'Roboto' , sans-serif;
+
+    .hide{
+        display: none;
+    }
     
 `
 
@@ -93,9 +97,16 @@ export const Navegation = Styled.div`
 
     position: absolute;
     bottom: 5rem;
+
+    .next{
+        background-color: ${({ theme }) => theme.colors.blue};
+        span{
+            color: ${({ theme }) => theme.colors.white};
+        }
+    }
     
 `
 
-export const FinishBuy = Styled.dialog`
+export const FinishBuy = Styled.div`
 
 `

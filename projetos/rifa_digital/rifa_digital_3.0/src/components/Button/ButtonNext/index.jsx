@@ -1,9 +1,10 @@
 import { Container } from "./style";
+
 import { BsArrowRight } from 'react-icons/bs'
 
-export function ButtonNext({title}){
+export function ButtonNext({title, ...rest}){
     return(
-        <Container>
+        <Container id="next" {...rest}>
             <span>
                 {title}
                 <BsArrowRight/>
