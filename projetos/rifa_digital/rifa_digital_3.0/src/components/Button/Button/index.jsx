@@ -1,11 +1,15 @@
 import { Container } from "./style";
+import { Link } from "react-router-dom";
 
-export function Button({title, ...rest}){
+export function Button({title, route, ...rest}){
     return(
         <Container {...rest}>
-            <span>
-                {title}
-            </span>
+            <Link to={route}>
+                <span>
+                    {title}
+                </span>
+            </Link>
+            
         </Container>
     )
 }

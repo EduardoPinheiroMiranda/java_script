@@ -1,15 +1,18 @@
 import { Container, Page, PaymentStep, Content, Navegation, FinishBuy} from "./style"
 
 import { Logo } from "../../components/Logo"
-import { ButtonBack } from "../../components/Button/ButtonBack"
-import { ButtonNext } from "../../components/Button/ButtonNext"
-
+// import { ButtonBack } from "../../components/Button/ButtonBack"
+// import { ButtonNext } from "../../components/Button/ButtonNext"
+import { Button } from "../../components/Button/Button"
 
 
 import { Register } from "./Elements/Register"
 import { ConfirmSale } from "./Elements/ConfirmSale"
 
+
+
 export function RegisterSale({...rest}){
+
     return(
         <Container>
             <Page>
@@ -37,8 +40,8 @@ export function RegisterSale({...rest}){
                     
                 </main>
                 <Navegation className="navegation">
-                    <ButtonBack title="voltar" router="/"/>
-                    <ButtonNext title="proximo"/>
+                    <Button title="voltar" route="/"/>
+                    <Button title="proximo"/>
                 </Navegation>
 
             </Page>

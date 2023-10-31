@@ -86,9 +86,7 @@ export function Sales(){
                         <SectionNumbers className="showNumbers">  
                         </SectionNumbers>
 
-                        <Link to="/registersale">
-                            <Button title="Confirmar"/>
-                        </Link>
+                        <Button title="Confirmar" route="/registersale"/>
                             
                         
                     </PopUp>

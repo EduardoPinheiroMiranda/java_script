@@ -56,8 +56,13 @@ export const Buy = Styled.div`
 
     .buttonActive{
         background-color: ${({ theme }) => theme.colors.blue};
-        color: ${({ theme }) => theme.colors.white};
         cursor: pointer;
+        
+        span{
+            color: ${({ theme }) => theme.colors.white};
+        }
+        
+        
     }
 
 

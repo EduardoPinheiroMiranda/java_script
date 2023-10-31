@@ -10,7 +10,7 @@ export const Container = styled.button`
     border: none;
     cursor: pointer;
 
-    a{
+    .link{
         text-decoration: none;
         
         >span{

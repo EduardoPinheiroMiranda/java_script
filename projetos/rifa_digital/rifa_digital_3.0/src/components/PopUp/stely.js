@@ -30,8 +30,7 @@ export const Container = styled.div`
         cursor: pointer;
     }
 
-    a{
-        button{
+    button{
             background-color: ${({ theme }) => theme.colors.blue};
 
             position: absolute;
@@ -43,8 +42,9 @@ export const Container = styled.div`
             span{
                 color: ${({ theme }) => theme.colors.white};
             }
-        }
     }
+    
+        
 
     
 `

@@ -1,25 +1,28 @@
 import { Container, Content} from "./styled"
 
 export function Register({...rest}){
-    function newButton(){
-        const navegation = document.querySelector(".navegation")
-        navegation.querySelector("#back").remove()
-        navegation.querySelector("#next").remove()
 
-        const newbuttons = `
-            <ButtonBack title="voltar" />
-            <ButtonNext title="proximo" className="next"/>
+    function updateButtons(){
+        const buttonBack = document.querySelector("#back")
+
+        const newButton = document.createElement("div")
+        newButton.classList.add("link")
+        const structButton = `
+            <span>voltar</span>
         `
+        newButton.innerHTML = structButton
 
-        const div = document.createElement("div")
-        div.innerHTML = newbuttons
+        buttonBack.querySelector("a").remove()
+        buttonBack.append(newButton)
 
-        navegation.append(div)
-        // const buttonNext = document.querySelector("#next")
-        // buttonNext.se
+
+        const buttonNext = document.querySelector(".next")
+        buttonNext.removeEventListener("click", nextStage)
+        
     }
 
-    function next(){
+    function nextStage(){
+
         const bodyRegister = document.querySelector(".bodyRegister")
         const BodyConfirmSale = document.querySelector(".bodyConfirmSale")
         const statePayment = document.querySelector(".state")
@@ -30,12 +33,14 @@ export function Register({...rest}){
         statePayment.classList.add("next")
         statePayment.querySelector("p").textContent = "Finalizar pagamento"
 
-        newButton()
+        console.log("oi")
+        updateButtons()
     }
 
-    function completeForm(){
+    function completeForm(event){
         const dataUser = document.querySelectorAll("input")
         const buttonNext = document.querySelector("#next")
+        
         let dataIncomplete = false
 
         dataUser.forEach((item) => {
@@ -50,9 +55,9 @@ export function Register({...rest}){
 
         if(!dataIncomplete){
             buttonNext.classList.add("next")
-
-            buttonNext.addEventListener("click", next)
+            buttonNext.addEventListener("click", nextStage)
         }
+
     }
 
     return(

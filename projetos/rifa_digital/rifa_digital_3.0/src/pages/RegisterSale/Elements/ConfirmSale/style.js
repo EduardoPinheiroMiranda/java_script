@@ -4,7 +4,7 @@ export const Container = Styled.div`
     font-family: "Roboto", sans-serif;
     
     width: 100%;
-    height: 62rem;
+    height: 60rem;
 
     overflow: auto;
 
