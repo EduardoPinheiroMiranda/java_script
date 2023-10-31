@@ -71,7 +71,7 @@ export const PaymentStep = Styled.div`
         transition: all 500ms;
     }
 
-    .next{
+    .nextStage{
         transform: translateX(22rem);
     }
 
@@ -98,7 +98,16 @@ export const Navegation = Styled.div`
     position: absolute;
     bottom: 5rem;
 
-    .next{
+    >.back{
+        background-color: ${({ theme }) => theme.colors.blue};
+
+        span{
+            color: ${({ theme }) => theme.colors.white};
+        }
+        
+    }
+
+    >.next{
         background-color: ${({ theme }) => theme.colors.blue};
         span{
             color: ${({ theme }) => theme.colors.white};

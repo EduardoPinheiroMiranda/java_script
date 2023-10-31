@@ -5,7 +5,7 @@ import { BsPersonCircle } from "react-icons/bs";
 import { BsXLg} from "react-icons/bs"
 
 import { Logo } from "../../components/Logo";
-import { Button } from "../../components/Button/Button";
+import { Button } from "../../components/Button";
 import { Subtitle } from "../../components/Subtitle";
 import { PopUp } from "../../components/PopUp";
 

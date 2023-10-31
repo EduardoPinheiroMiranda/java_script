@@ -11,9 +11,11 @@ export const Container = styled.button`
     border-radius: 0.5rem;
     border: 1px solid ${({ theme }) => theme.colors.blue};
 
+    cursor: pointer;
+
     >a{
         text-decoration: none;
-
+        
         span{
             color: ${({ theme }) => theme.colors.blue};
             
@@ -21,7 +23,7 @@ export const Container = styled.button`
             font-family: 'Roboto', sans-serif;
             font-weight: 600;
 
-            padding: 4rem;
+            padding: 0 4.2rem;
             
         }
 

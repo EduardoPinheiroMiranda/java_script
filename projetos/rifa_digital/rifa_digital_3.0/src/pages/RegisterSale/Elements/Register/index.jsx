@@ -5,20 +5,18 @@ export function Register({...rest}){
     function updateButtons(){
         const buttonBack = document.querySelector("#back")
 
-        const newButton = document.createElement("div")
-        newButton.classList.add("link")
+        const newLink = document.createElement("a")
         const structButton = `
             <span>voltar</span>
         `
-        newButton.innerHTML = structButton
+        newLink.innerHTML = structButton
 
         buttonBack.querySelector("a").remove()
-        buttonBack.append(newButton)
+        buttonBack.append(newLink)
 
 
         const buttonNext = document.querySelector(".next")
         buttonNext.removeEventListener("click", nextStage)
-        
     }
 
     function nextStage(){
@@ -30,14 +28,13 @@ export function Register({...rest}){
         bodyRegister.classList.add("hide")
         BodyConfirmSale.classList.remove("hide")
 
-        statePayment.classList.add("next")
+        statePayment.classList.add("nextStage")
         statePayment.querySelector("p").textContent = "Finalizar pagamento"
 
-        console.log("oi")
         updateButtons()
     }
 
-    function completeForm(event){
+    function completeForm(){
         const dataUser = document.querySelectorAll("input")
         const buttonNext = document.querySelector("#next")
         
@@ -57,7 +54,7 @@ export function Register({...rest}){
             buttonNext.classList.add("next")
             buttonNext.addEventListener("click", nextStage)
         }
-
+        
     }
 
     return(
