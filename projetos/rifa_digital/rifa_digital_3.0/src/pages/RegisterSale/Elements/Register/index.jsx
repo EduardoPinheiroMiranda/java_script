@@ -1,12 +1,36 @@
 import { Container, Content} from "./styled"
 
 export function Register({...rest}){
+    function newButton(){
+        const navegation = document.querySelector(".navegation")
+        navegation.querySelector("#back").remove()
+        navegation.querySelector("#next").remove()
+
+        const newbuttons = `
+            <ButtonBack title="voltar" />
+            <ButtonNext title="proximo" className="next"/>
+        `
+
+        const div = document.createElement("div")
+        div.innerHTML = newbuttons
+
+        navegation.append(div)
+        // const buttonNext = document.querySelector("#next")
+        // buttonNext.se
+    }
+
     function next(){
         const bodyRegister = document.querySelector(".bodyRegister")
         const BodyConfirmSale = document.querySelector(".bodyConfirmSale")
+        const statePayment = document.querySelector(".state")
         
         bodyRegister.classList.add("hide")
         BodyConfirmSale.classList.remove("hide")
+
+        statePayment.classList.add("next")
+        statePayment.querySelector("p").textContent = "Finalizar pagamento"
+
+        newButton()
     }
 
     function completeForm(){

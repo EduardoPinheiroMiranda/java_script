@@ -10,5 +10,9 @@ export default createGlobalStyle`
     :root{
         font-size: 62.5%;
     }
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
     
 `

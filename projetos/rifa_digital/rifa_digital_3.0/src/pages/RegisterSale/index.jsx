@@ -21,9 +21,9 @@ export function RegisterSale({...rest}){
                     <nav>
                         <PaymentStep>
                             <p>Registrar Bilhete</p>
-                            <p>Pagamentos</p>
+                            <p>Finalizar pagamento</p>
 
-                            <div className="">  
+                            <div className="state">  
                                 <p>Registrar bilhete</p>
                             </div>
                         </PaymentStep>
@@ -36,7 +36,7 @@ export function RegisterSale({...rest}){
                     </Content>
                     
                 </main>
-                <Navegation>
+                <Navegation className="navegation">
                     <ButtonBack title="voltar" router="/"/>
                     <ButtonNext title="proximo"/>
                 </Navegation>
