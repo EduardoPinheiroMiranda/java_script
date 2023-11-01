@@ -4,7 +4,6 @@ export const Container = Styled.div`
     font-family: "Roboto", sans-serif;
     
     width: 30rem;
-    height: 60rem;
 
     overflow-y: auto;
 
@@ -130,12 +129,44 @@ export const Payment = Styled.div`
                 text-align: center;
             }
         }
+        
         svg{
             width: 2rem;
             height: 2rem;
+            cursor: pointer;
         }
 
     }
+
+    .copyPixKey{
+        width: 15rem;
+
+        text-align: center;
+        
+        margin: 0 auto;
+
+        transform: translateY(-6rem);
+
+        transition: all 1s;
+        
+
+        span{
+            color: ${({ theme }) => theme.colors.green};
+            font-size: 1.6rem;
+            font-weight: 600;
+            opacity: 0;
+        }
+
+    }
+
+    .shownotify{
+        transform: translateY(-4rem);
+        
+        span{
+            opacity: 1;
+        }
+    }
+
+    
     
 `
-

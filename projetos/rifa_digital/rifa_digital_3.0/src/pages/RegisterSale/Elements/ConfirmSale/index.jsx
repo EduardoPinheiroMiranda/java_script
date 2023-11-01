@@ -3,8 +3,27 @@ import { Container, InfoRaffle, InfoUser, Payment} from "./style"
 import { BsFiles } from "react-icons/bs"
 
 export function ConfirmSale({...rest}){
+
+    function copyKey(){
+        const pixKey = document.querySelector("#pixKey")
+        const notify = document.querySelector(".copyPixKey")
+        
+
+
+        navigator.clipboard.writeText(pixKey.textContent).then(
+            notify.classList.add("shownotify"),
+
+            setTimeout(() => {
+                notify.classList.remove("shownotify")
+            },2000)
+            
+        )
+        
+        
+    }
+
     return(
-        <Container className="bodyConfirmSale">
+        <Container className="bodyConfirmSale moveright">
             
                 <InfoRaffle>
                     <h1>
@@ -55,9 +74,13 @@ export function ConfirmSale({...rest}){
                     <div >
                         <p>chave PIX:</p>
                         <div>
-                            <span>lkjefgholifhjugsdoliuyfljdyhcdgkchgksdhgosdhuj</span>
+                            <span id="pixKey">lkjefgholifhjugsdoliuyfljdyhcdgkchgksdhgosdhuj</span>
                         </div>
-                        <BsFiles/>
+                        <BsFiles onClick={copyKey}/>
+                    </div>
+
+                    <div className="copyPixKey">
+                        <span>chave copiada</span>
                     </div>
 
                 </Payment>

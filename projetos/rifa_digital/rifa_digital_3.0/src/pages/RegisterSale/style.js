@@ -85,7 +85,7 @@ export const Content = Styled.div`
     
 
     width: 30rem;
-    height: 60rem;
+    height: 90rem;
 
     margin: 0 auto;
     
