@@ -1,5 +1,3 @@
-import styled from 'styled-components'
-
 export default {
     colors :{
         blue: '#00A3D7',

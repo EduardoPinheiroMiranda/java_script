@@ -1,8 +1,6 @@
 import { Container, Page, PaymentStep, Content, Navegation, FinishBuy} from "./style"
 
 import { Logo } from "../../components/Logo"
-// import { ButtonBack } from "../../components/Button/ButtonBack"
-// import { ButtonNext } from "../../components/Button/ButtonNext"
 import { Button } from "../../components/Button"
 
 
@@ -33,8 +31,10 @@ export function RegisterSale({...rest}){
                     </nav>
 
                     <Content>
+                        
                         <Register/>
                         <ConfirmSale/>
+                        
                     </Content>
                     
                 </main>
@@ -45,15 +45,19 @@ export function RegisterSale({...rest}){
 
             </Page>
 
-            <FinishBuy className="hide">
+            <FinishBuy className="finishBuy hide">
                 <div>
                     
                     <p>Parabéns você acabou de reservar seus números da sorte !</p>
                     <p>
-                        A validação da compra é realizada em até 48h! 
-                        Por favor aguarde a validação pacientimente e tenha uma boa sorte !
+                        A validação da compra é realizada em até 48h. 
+                        Lembrando que foi enviado um comprovante da compra para seu e-mail, 
+                        guarde com cuidado e não compartilhe com ninguém. 
+                        Por favor aguarde a validação pacientemente e tenha uma boa sorte !
                         :D
                     </p>
+
+                    <Button title="ok" route="/"/>
                 </div>
             </FinishBuy>
             

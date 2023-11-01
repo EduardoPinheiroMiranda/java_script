@@ -3,14 +3,21 @@ import Styled from "styled-components"
 export const Container = Styled.div`
     font-family: 'Robot', sans-serif;
 
-    width: 100%;
+    width: 30rem;
 
     margin-top: 2.5rem;
     margin-bottom: 3rem;
 
+    transition: transform 300ms;
+
+
+    
     .hide{
         display: none;
     }
+
+    
+
 `
 
 export const Content = Styled.div`

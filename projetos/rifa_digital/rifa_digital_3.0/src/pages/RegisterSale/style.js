@@ -3,6 +3,8 @@ import Styled from "styled-components";
 export const Container = Styled.div`
     font-family: 'Roboto' , sans-serif;
 
+    position: relative;
+
     .hide{
         display: none;
     }
@@ -16,7 +18,7 @@ export const Page = Styled.div`
     position: relative;
 
      >main {
-
+        
         nav{
             background-color: ${({ theme }) => theme.colors.blue};
             color: ${({ theme }) => theme.colors.white};
@@ -82,10 +84,23 @@ export const PaymentStep = Styled.div`
 export const Content = Styled.div`
     
 
-    width: 28rem;
+    width: 30rem;
     height: 60rem;
 
     margin: 0 auto;
+    
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    .moveLeft{
+        transform: translateX(-100rem);
+    }
+
+    .moveright{
+        transform: translateX(0rem);
+    }
+    
  
 `
 
@@ -117,5 +132,54 @@ export const Navegation = Styled.div`
 `
 
 export const FinishBuy = Styled.div`
+    background-color: ${({ theme }) => theme.colors.background};
 
+    width: 100%;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+
+    display: grid;
+    place-items: center;
+
+    >div{
+        background-color: ${({ theme }) => theme.colors.white};
+
+        width: 30rem;
+        height: 40rem;
+
+
+
+        border-radius: 0.5rem;
+
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+
+        p{
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-align: center;
+            
+            margin-top: 2rem;
+            width: 20rem;
+        }
+
+        button{
+            background-color: ${({ theme }) => theme.colors.blue};
+
+            margin-top: 5rem;
+
+            span{
+                color: ${({ theme }) => theme.colors.white};
+            }
+        
+        }
+    }
 `

@@ -3,19 +3,23 @@ import Styled from "styled-components"
 export const Container = Styled.div`
     font-family: "Roboto", sans-serif;
     
-    width: 100%;
+    width: 30rem;
     height: 60rem;
 
-    overflow: auto;
+    overflow-y: auto;
 
-        hr{
-            border: 1px solid ${({ theme }) => theme.colors.blue};
-            width: 15rem;
+    transform: translateX(100rem);
+    transition: transform 300ms;
 
-            margin: 1.5rem auto;
-        }
 
-    .hide{
+    hr{
+        border: 1px solid ${({ theme }) => theme.colors.blue};
+        width: 15rem;
+
+        margin: 1.5rem auto;
+    }
+
+    >.hide{
         display: none;
     }
 
