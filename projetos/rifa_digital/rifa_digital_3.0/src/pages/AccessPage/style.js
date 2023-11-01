@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import Styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = Styled.div`
     font-family: 'Roboto', sans-serif;
 
     background-color: rgb(240,240,240);
@@ -12,7 +12,28 @@ export const Container = styled.div`
     place-items: center;
 
     >main{
+        position: relative;
+
+        .infoTop{
+            transform: translateY(-33rem);
+
+            .login{
+                transform: translatex(-30rem);
+            }
+
+            .sigUp{
+                transform: translatex(-30rem);
+
+            }
+        }
+    }
+    
+        
+`
+
+export const DataUser = Styled.div`
         background-color: ${({ theme }) => theme.colors.white};
+        
         width: 30rem;
 
         border-radius: 0.5rem;
@@ -20,64 +41,65 @@ export const Container = styled.div`
         display: grid;
         gap: 3rem;
 
-        position: relative;
+        form{
+            height: 30rem;
 
-        .top{
-            position: absolute;
-            top: 0;
-        }
+            display: grid;
+            place-items: center;
+            gap: 2rem;
 
-        .botton{
-            position: absolute;
-            bottom: 0;
-        }
-    }
+            padding: 2rem;
 
-    > main form{
-        height: 30rem;
+            h2{
+                font-size: 2.5rem;
+            }
 
-        display: grid;
-        place-items: center;
-        gap: 2rem;
+            input{
+                padding: 1rem 2rem;
+                outline-color: ${({ theme }) => theme.colors.outline};
+                border: 1px solid ${({ theme }) => theme.colors.blue};
+            }
 
-        padding: 2rem;;
-
-        h2{
-            font-size: 2.5rem;
-        }
-
-        input{
-            padding: 1.5rem;
-        }
-
-        Button{
-            background-color: ${({ theme }) => theme.colors.blue};
-            
-            span{
-                color: ${({ theme }) => theme.colors.white};
+            button{
+                background-color: ${({ theme }) => theme.colors.blue};
+                
+                span{
+                    color: ${({ theme }) => theme.colors.white};
+                }
             }
         }
-    }
-    
 
+        
 `
 
-export const Information = styled.div`
+export const Information = Styled.div`
+    background-color: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.white};
+
+    width: 30rem;
+    height: 30rem;
+
+    border-radius: 0.5rem;
+    overflow-x: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    position: absolute;
+    bottom: 0;
+   
+    transition: all 500ms;
+
 
     >div{
-        background-color: ${({ theme }) => theme.colors.blue};
-        color: ${({ theme }) => theme.colors.white};
-
-        width: 100%;
-        height: 31rem;
-        border-radius: 0.5rem;
+        width: 30rem;
 
         display: flex;
         flex-direction: column;
-
         justify-content: center;
         align-items: center;
 
+        transition: all 500ms;
 
         h2{
             font-size: 2.5rem;
@@ -95,17 +117,10 @@ export const Information = styled.div`
             font-size:1.4rem;
             margin-bottom: 3rem;
         }
+
+        button{
+            width: 16rem;
+        }
     }
-
-    .hide{
-        display: none;
-    }
-
-`
-export const LogIn = styled.div`
-    
-
-`
-export const SignUp = styled.div`    
 
 `

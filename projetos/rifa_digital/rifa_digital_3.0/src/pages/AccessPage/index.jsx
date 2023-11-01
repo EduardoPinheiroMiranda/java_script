@@ -1,49 +1,57 @@
-import { Container, Information, SignUp, LogIn } from './style'
+import { Container, DataUser, Information } from './style'
 
-import { Input } from '../../components/input'
 import { Button } from '../../components/Button'
 
 export function AccessPage(){
+    
+    function accessMode(){
+        const mode = document.querySelector(".mode")
+
+        mode.classList.toggle("infoTop")
+    }
 
     return(
         <Container>
             <main>
-                <form>
-                    <h2>Entrar</h2>
-                    <Input placeholder='Email'/>
-                    <Input placeholder='Senha'/>
-                    <Button title='Entrar'/>
-                </form>
+                <DataUser >
+                    <form>
+                        <h2>Entrar</h2>
+                        <input placeholder='Email'/>
+                        <input placeholder='Senha'/>
+                        <Button title='Entrar'/>
+                    </form>
 
-                <form>
-                    <h2>Criar conta</h2>
-                    <Input placeholder='Nome'/>
-                    <Input placeholder='Email'/>
-                    <Input placeholder='Senha'/>
-                    <Button title='Cadastrar'/>
-                </form>
+                    <form>
+                        <h2>Criar conta</h2>
+                        <input placeholder='Nome'/>
+                        <input placeholder='Email'/>
+                        <input placeholder='Senha'/>
+                        <Button title='Cadastrar'/>
+                    </form>
+                </DataUser>
 
-                <Information className='botton'>
-                    <LogIn>
+                <Information className="mode">
+                    <div className="login">
                         <h2>Que bom que voltou !</h2>
                         <p>
                             Insira suas informações de login e venha 
                             ser um vencedor. 
                         </p>
                         <span>ou</span>
-                        <Button title='cria conta'/>
-                    </LogIn>
+                        <Button onClick={accessMode} title="Criar conta"/>
+                    </div>
 
-                    <SignUp className='hide'>
+                    <div className="sigUp">
                         <h2>Seja bem-vindo!</h2>
                         <p>
                             Cadastre-se em nossa plataforma e venha ser vitorioso.
                         </p> 
                         <span>ou</span>
-                        <Button title='Já tenho conta'/>
-                    </SignUp>
+                        <Button onClick={accessMode} title="Fazer Login"/>
+                    </div>
                 </Information>
             </main>
+            
         </Container>
     )
 }

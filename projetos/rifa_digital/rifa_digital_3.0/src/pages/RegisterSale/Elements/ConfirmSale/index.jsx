@@ -23,7 +23,7 @@ export function ConfirmSale({...rest}){
     }
 
     return(
-        <Container className="bodyConfirmSale moveright">
+        <Container className="bodyConfirmSale">
             
                 <InfoRaffle>
                     <h1>

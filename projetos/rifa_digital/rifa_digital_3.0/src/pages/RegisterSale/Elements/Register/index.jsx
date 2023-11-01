@@ -99,7 +99,7 @@ export function Register({...rest}){
     }
 
     return(
-        <Container className="bodyRegister moveLeft">
+        <Container className="bodyRegister">
             <Content>
                 <div>
                     <label htmlFor="name">Nome completo</label> 
