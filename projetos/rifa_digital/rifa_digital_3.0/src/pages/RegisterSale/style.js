@@ -70,7 +70,7 @@ export const PaymentStep = Styled.div`
 
         position: absolute;
 
-        transition: all 500ms;
+        transition: transform 300ms;
     }
 
     .nextStage{
@@ -89,19 +89,19 @@ export const Content = Styled.div`
 
     margin: 0 auto;
     
+    overflow-x: hidden;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+
     .moveLeft{
         transform: translateX(-100rem);
     }
 
     .moveright{
-        transform: translateX(0rem);
+        transform: translateX(-30rem);
     }
-    
- 
+
 `
 
 export const Navegation = Styled.div`

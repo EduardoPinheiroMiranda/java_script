@@ -11,7 +11,6 @@ export const Container = Styled.div`
     transform: translateX(100rem);
     transition: transform 300ms;
 
-
     hr{
         border: 1px solid ${({ theme }) => theme.colors.blue};
         width: 15rem;

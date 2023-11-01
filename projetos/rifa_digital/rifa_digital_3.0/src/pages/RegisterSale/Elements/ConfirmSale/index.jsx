@@ -4,7 +4,7 @@ import { BsFiles } from "react-icons/bs"
 
 export function ConfirmSale({...rest}){
     return(
-        <Container className="bodyConfirmSale hide">
+        <Container className="bodyConfirmSale">
             
                 <InfoRaffle>
                     <h1>

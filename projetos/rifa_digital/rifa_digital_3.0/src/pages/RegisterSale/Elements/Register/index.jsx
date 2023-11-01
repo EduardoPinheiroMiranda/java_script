@@ -12,26 +12,27 @@ export function Register({...rest}){
         const statePayment = document.querySelector(".state")
         
         
-        
         bodyConfirmSale.classList.remove("moveright")
-        
-        
         setTimeout(() => {
-            bodyRegister.classList.remove("hide")
-            bodyConfirmSale.classList.add("hide")
             bodyRegister.classList.remove("moveLeft")
         },200)
 
-        
         statePayment.classList.remove("nextStage")
         statePayment.querySelector("p").textContent = "Registrar bilhete"
 
+        const buttonBack = document.querySelector("#back")
+        const link = document.createElement("a")
+        link.setAttribute("href", "/")
+        link.innerHTML = `
+            <span>voltar</span>
+        `
+        buttonBack.querySelector("a").remove()
+        buttonBack.append(link)
 
         const buttonNext = document.querySelector("#next")
         buttonNext.removeEventListener("click", openPopUpFinish)
         buttonNext.addEventListener("click", nextStage)
 
-        
     }
 
     function updateButtons(){
@@ -59,17 +60,13 @@ export function Register({...rest}){
     function nextStage(){
 
         const bodyRegister = document.querySelector(".bodyRegister")
-        const BodyConfirmSale = document.querySelector(".bodyConfirmSale")
+        const bodyConfirmSale = document.querySelector(".bodyConfirmSale")
         const statePayment = document.querySelector(".state")
         
         bodyRegister.classList.add("moveLeft")
-        BodyConfirmSale.classList.remove("hide")
-        
         setTimeout(() => {
-            bodyRegister.classList.add("hide")
-            BodyConfirmSale.classList.add("moveright")
+            bodyConfirmSale.classList.add("moveright")
         },200)
-        
     
         statePayment.classList.add("nextStage")
         statePayment.querySelector("p").textContent = "Finalizar pagamento"
