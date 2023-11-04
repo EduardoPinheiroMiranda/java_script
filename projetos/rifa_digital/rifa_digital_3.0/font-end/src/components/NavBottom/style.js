@@ -15,7 +15,6 @@ export const Container = Styled.div`
     bottom: 0;
 
     a{
-
         width: 4rem;
         height: 4rem;
 
