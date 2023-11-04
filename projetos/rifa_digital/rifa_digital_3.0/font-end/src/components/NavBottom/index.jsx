@@ -1,13 +1,21 @@
 import { Container } from "./style"
-import { BsPersonFill, BsBagFill,  BsTicketDetailed, BsPlusCircle} from "react-icons/bs"
+import { BsPersonFill, BsBagFill,  BsTicketDetailed, BsPlusCircleFill} from "react-icons/bs"
+import { Link } from "react-router-dom"
 
-export function NavBottom(){
+export function NavBottom({bag, profile, management, ...rest}){
 
     return(
         <Container>
-            <div></div>
-            <div></div>
-            <div></div>
+            <Link className={bag} to="/user/participatingRaffle" >
+                <BsBagFill/>
+            </Link>
+            <Link className={profile} to="/user/profile" >
+                <BsPersonFill/>
+            </Link>
+            <Link className={management} to="/user/managementRaffle" >
+                <BsTicketDetailed/>
+                <BsPlusCircleFill/>
+            </Link>
         </Container>
     )
 }
