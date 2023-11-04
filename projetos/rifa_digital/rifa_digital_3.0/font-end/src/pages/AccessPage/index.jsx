@@ -18,7 +18,7 @@ export function AccessPage(){
                         <h2>Entrar</h2>
                         <input placeholder='Email'/>
                         <input placeholder='Senha'/>
-                        <Button title='Entrar'/>
+                        <Button title='Entrar' route="/user/profile"/>
                     </form>
 
                     <form>
@@ -26,7 +26,7 @@ export function AccessPage(){
                         <input placeholder='Nome'/>
                         <input placeholder='Email'/>
                         <input placeholder='Senha'/>
-                        <Button title='Cadastrar'/>
+                        <Button title='Cadastrar' />
                     </form>
                 </DataUser>
 
