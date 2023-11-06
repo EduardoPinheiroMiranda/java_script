@@ -142,22 +142,48 @@ export const Password = Styled.div`
     width: 100%;
     margin: 0 auto 3rem;
     
-    label{
-        display: block;
+    div{
+        position: relative;
 
-        font-size: 1.2rem;
-        font-weight: 400;
+        label{
+            display: block;
+
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        input{
+            width: 25rem;
+            height: 2rem;
+
+            padding: 0 1rem;
+
+            border: 1px solid ${({ theme }) => theme.colors.blue};
+            margin: 0 4.4rem 1.8rem 2.5rem;
+
+            outline-color: ${({ theme }) => theme.colors.outline};
+        }
+
+        .showPassword{
+            color: ${({ theme }) => theme.colors.blue};
+
+            position: absolute;
+            top: 1.7rem;
+            right: 3rem;
+            
+            svg{
+                width: 1.5rem;
+                height: 1.5rem;
+
+                cursor: pointer;
+            }
+
+            .hide{
+                display: none;
+            }
+        }
     }
-
-    input{
-        width: 25rem;
-        height: 2rem;
-
-        border: 1px solid ${({ theme }) => theme.colors.blue};
-        margin: 0 4.4rem 1.8rem 2.5rem;
-
-        outline-color: ${({ theme }) => theme.colors.outline};
-    }
+    
 
 `
 
