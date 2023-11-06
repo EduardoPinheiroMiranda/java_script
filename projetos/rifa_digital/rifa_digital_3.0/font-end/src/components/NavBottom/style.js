@@ -23,9 +23,6 @@ export const Container = Styled.div`
         
         border-radius: 50%;
 
-        transition: all 500ms;
-
-
         svg{
             color: ${({ theme }) => theme.colors.white};
             width: 2rem;
@@ -54,8 +51,11 @@ export const Container = Styled.div`
 
     .select{
         background-color: ${({ theme }) =>  theme.colors.white};
+        opacity: 0;
 
-        animation-name: move;
+        animation-name: navbarProfile;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
 
 
         svg{

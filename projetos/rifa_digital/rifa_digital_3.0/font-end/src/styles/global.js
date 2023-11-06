@@ -5,6 +5,7 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
     }
 
     :root{
@@ -13,6 +14,12 @@ export default createGlobalStyle`
 
     ::-webkit-scrollbar{
         display: none;
+    }
+
+    @keyframes navbarProfile {
+        from{opacity: 0}
+        to{opacity: 1}
+
     }
     
 `
