@@ -3,6 +3,7 @@ import Styled from "styled-components"
 export const Container = Styled.div`
     background-color: ${({ theme }) => theme.colors.blue};
 
+    min-width: 36rem;
     width: 100%;
     height: 5rem;
 

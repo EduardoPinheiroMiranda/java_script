@@ -22,9 +22,6 @@ export const Container = styled.button`
             font-size: 1.6rem;
             font-family: 'Roboto', sans-serif;
             font-weight: 600;
-
-            padding: 0 4.2rem;
-            
         }
 
     }

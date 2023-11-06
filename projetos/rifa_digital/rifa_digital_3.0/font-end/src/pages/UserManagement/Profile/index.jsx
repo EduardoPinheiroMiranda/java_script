@@ -1,16 +1,26 @@
-import { Container, UserInfo, Line, Password} from "./style"
-import { BsBoxArrowLeft } from "react-icons/bs"
+import { Container, Avatar, UserInfo, Line, Password} from "./style"
+import { BsBoxArrowLeft, BsCameraFill } from "react-icons/bs"
+
 import { Logo } from "../../../components/Logo"
 import { NavBottom } from "../../../components/NavBottom"
+import { Button } from "../../../components/Button"
 
 export function Profile(){
 
     return(
         <Container>
             <Logo/>
-            <main>
-                <BsBoxArrowLeft/>
-                <div className="foto"></div>
+        
+            <main> 
+                <BsBoxArrowLeft className="logOof"/>
+                <Avatar>
+                    <img src="https://github.com/eduardopinheiromiranda.png" alt="picture user" />
+                    <label htmlFor="addPicture">
+                        <BsCameraFill/>
+                    </label>
+                    <input id="addPicture" type="file" />
+                </Avatar>
+
                 <h1>Eduardo Pinheiro Miranda</h1>
 
                 <UserInfo>
@@ -47,8 +57,10 @@ export function Profile(){
                     <label htmlFor="confimarSenha">Confirmar senha</label>
                     <input id="confimarSenha" type="password" />
                 </Password>
+
+                <Button title="Alterar senha" />
             </main>
-                
+            
 
             <NavBottom profile="select"/>
         </Container>

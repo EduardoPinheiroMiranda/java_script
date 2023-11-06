@@ -1,22 +1,24 @@
 import Styled from "styled-components"
 
 export const Container = Styled.div`
-    width: 100%;
+    min-width: 36rem;
 
-    main{
-        position: relative;
-        svg{
-            position: absolute;
-            bottom: 0
-        }
+    >main{
+        width: 30rem;
 
-        .foto{
-            background-color: gray;
-            width: 10rem;
-            height: 10rem;
+        margin: 0 auto;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .logOof{
+            color: ${({ theme }) => theme.colors.blue};
 
-            border-radius: 50%;
-            margin: 3rem auto 1.5rem;
+            width: 2rem;
+            height: 2rem;
+           
+            margin: 0.5rem 0.5rem 0.5rem 29.5rem;
         }
 
         h1{
@@ -26,14 +28,72 @@ export const Container = Styled.div`
             text-align: center;
             margin-bottom: 4.2rem;
         }
+
+        button{
+            background-color: ${({ theme }) => theme.colors.blue};
+            
+            margin: 0 auto;
+
+            span{
+                color: ${({ theme }) => theme.colors.white};
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
+        }
+
+        button:hover{
+            background-color: ${({ theme }) => theme.colors.buttonHouver};
+        }
     }
 
+`
 
+export const Avatar = Styled.div`
+
+    display: grid;
+    justify-content: center;
+
+    position: relative;
+
+    margin: 0.5rem auto 1.5rem;
+    
+
+    >img{
+        width: 10rem;
+        height: 10rem;
+
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    >label{
+        color: ${({ theme }) => theme.colors.blue};
+
+        width: 2rem;
+        height: 2rem;
+
+        border-radius: 50%;
+
+        display: grid;
+        place-items: center;
+
+        margin-top: -1.5rem;
+        margin-left: 8rem;
+
+         svg{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    >input{
+        display: none;
+    }
 
 `
 
 export const UserInfo = Styled.div`
-    width: 30rem;
+    width: 100%;
 
     margin: 0 auto;
     span{
@@ -44,9 +104,16 @@ export const UserInfo = Styled.div`
     div{
         width: 25rem;
         height: 2rem;
+        
+        padding: 0 1rem;
 
         border: 1px solid ${({ theme }) => theme.colors.blue};
         margin: 0 4.4rem 1.8rem 2.5rem;
+
+        display: flex;
+        align-items: center;
+
+
 
     }
 
@@ -72,8 +139,8 @@ export const Line = Styled.div`
 `
 
 export const Password = Styled.div`
-    width: 30rem;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto 3rem;
     
     label{
         display: block;
