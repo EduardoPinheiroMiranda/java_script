@@ -48,7 +48,6 @@ export function Sales(){
     return(
         <Container>
             <Page>
-
                 <header>
                     <Logo/>
 
