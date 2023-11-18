@@ -1,4 +1,4 @@
-import  { Readable } from "node:stream"
+import  { Readable} from "node:stream"
 
 class OneToHundredStream extends Readable{
     index = 1
@@ -8,7 +8,7 @@ class OneToHundredStream extends Readable{
 
 
         setTimeout(() => {
-            if(i>100){
+            if(i>3){
                 this.push(nulll)
             }
             else{
@@ -23,4 +23,11 @@ class OneToHundredStream extends Readable{
 fetch('http://localhost:3334',{
     method: 'POST',
     body: new OneToHundredStream(),
+    duplex: "half",
+
+})
+.then(response => {
+    return response.text()
+}).then(data => {
+    console.log(data)
 })
