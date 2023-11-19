@@ -1,0 +1,47 @@
+.student{
+    color: var(--colorFont);
+
+    width: 29rem;
+    height: 3rem;
+    padding: 2rem;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.name{
+    
+    overflow-x: hidden;
+    height: 2rem;
+    width: 17rem;
+}
+
+.attributes{
+    display: flex;
+    gap: 1rem;
+
+    
+}
+
+svg{
+    width: 1.5rem;
+    height: 1.5rem;
+
+    cursor: pointer;
+}
+
+svg:nth-child(3):hover{
+    fill: rgb(196, 0, 0);
+}
+
+svg:nth-child(2):hover{
+    fill: rgb(0, 174, 255);
+}
+
+svg:nth-child(1):hover{
+    fill: rgb(0, 174, 255);
+}
