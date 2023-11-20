@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { Students } from '../../Students';
 
 @Component({
   selector: 'app-aluno',
@@ -10,97 +12,22 @@ import { CommonModule } from '@angular/common';
 })
 
 export class AlunoComponent {
+  @Input() students: Students[] = [
+    {
+      matricola: "",
+      name: "",
+      email: ""
+    }
+  ]
   
 
+  delite(matricola: string): void{
 
-  students = [
-    {
-      matricola: "00000001",
-      name: "Ricardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000002",
-      name: "Eduardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000001",
-      name: "Ricardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000002",
-      name: "Eduardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000001",
-      name: "Ricardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000002",
-      name: "Eduardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000001",
-      name: "Ricardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000002",
-      name: "Eduardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000001",
-      name: "Ricardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000002",
-      name: "Eduardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000001",
-      name: "Ricardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000002",
-      name: "Eduardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000001",
-      name: "Ricardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000002",
-      name: "Eduardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000001",
-      name: "Ricardo" ,
-      email: "teste@teste.com" 
-    },
-    {
-      matricola: "00000002",
-      name: "Eduardo" ,
-      email: "teste@teste.com" 
-    },
-    
-  ]
+    this.students = this.students.filter((student) => {
+      return student.matricola !== matricola
+    })
 
-  update(): void{
-
-    document.querySelector(".updateStudent")?.classList.add("moveright")
-    document.querySelector(".showStudents")?.classList.add("moveright")
+    console.log()
   }
 
 }

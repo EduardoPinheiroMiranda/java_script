@@ -3,25 +3,32 @@
         <div class="header">
             <span>Lista de alunos</span>
             <nav>
-                <div (click)="exibirLista()" >Exibir</div>
-                <div (click)="adicionar()">Adicionar</div>
+                <div>
+                    <a href="/" >Exibir</a>
+                </div>
+                <div>
+                    <a href="/add">Adicionar</a>
+                </div>
+                
             </nav>
         </div>
     
         <section class="bodyList">
-            <div class="bodyshow">
+            <!-- <div class="bodyshow">
                 <div class="section updateStudent">
                     <app-update-student></app-update-student>
                 </div>
 
                 <div class="section showStudents">
-                    <app-aluno></app-aluno>
+                    <app-aluno [students]="Students"></app-aluno>
                 </div>
 
                 <div class="section addStundent">
-                    <app-create-student></app-create-student>
+                    <app-create-student [students]="Students"></app-create-student>
                 </div>
-            </div>
+            </div> -->
+
+            <router-outlet></router-outlet>
         </section>
     </div>
 </main>

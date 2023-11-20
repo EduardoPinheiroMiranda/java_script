@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+import { Students } from './Students';
 import { AlunoComponent } from './components/aluno/aluno.component';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { UpdateStudentComponent } from './components/update-student/update-student.component';
@@ -17,7 +18,6 @@ import { UpdateStudentComponent } from './components/update-student/update-stude
     AlunoComponent,
     CreateStudentComponent,
     UpdateStudentComponent,
-
     FormsModule,
     
   ],
@@ -27,10 +27,24 @@ import { UpdateStudentComponent } from './components/update-student/update-stude
 
 export class AppComponent {
 
-  inicializador(): void{
-    console.log("document.querySelector()")
-  }
-
+  Students: Students[] =[
+    {
+      matricola: "00000001",
+      name: "Ricardo" ,
+      email: "teste@teste.com" 
+    },
+    {
+      matricola: "00000002",
+      name: "Eduardo" ,
+      email: "teste@teste.com" 
+    },
+    {
+      matricola: "00000003",
+      name: "Carlos" ,
+      email: "teste@teste.com" 
+    },
+  ]
+  
   exibirLista(): void{
     document.querySelector(".showStudents")?.classList.remove("moveleft")
     document.querySelector(".addStundent")?.classList.remove("moveleft")
