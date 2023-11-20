@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 
 export class AlunoComponent {
+  
+
 
   students = [
     {
@@ -95,5 +97,10 @@ export class AlunoComponent {
     
   ]
 
+  update(): void{
+
+    document.querySelector(".updateStudent")?.classList.add("moveright")
+    document.querySelector(".showStudents")?.classList.add("moveright")
+  }
 
 }
