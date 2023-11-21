@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--colorFont);
+    scroll-behavior: smooth;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --colorFont: #575757;
+    --colorButton: #d9d9d9;
+    --colorLine: #a1a1a1;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
