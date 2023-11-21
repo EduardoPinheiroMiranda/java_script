@@ -1,5 +1,5 @@
 export interface Students{
-    matricola: string
+    matricola: string,
     name: string,
-    email: string
+    email: string,
 }

@@ -14,21 +14,5 @@ import { RouterOutlet } from '@angular/router';
 })
 
 export class AppComponent {
-
-  
-  exibirLista(): void{
-    document.querySelector(".showStudents")?.classList.remove("moveleft")
-    document.querySelector(".addStundent")?.classList.remove("moveleft")
-
-    document.querySelector(".updateStudent")?.classList.remove("moveright")
-    document.querySelector(".showStudents")?.classList.remove("moveright")
-  }
-
-  adicionar(): void{
-    document.querySelector(".showStudents")?.classList.add("moveleft")
-    document.querySelector(".addStundent")?.classList.add("moveleft")
-
-    document.querySelector(".updateStudent")?.classList.remove("moveright")
-  }
-
+  title = 'myApp'
 }
