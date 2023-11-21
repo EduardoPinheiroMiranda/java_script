@@ -1,0 +1,19 @@
+{
+    "students": [
+        {
+            "matricola": "00000001",
+            "name": "Eduardo",
+            "email": "teste@gmail.com"
+        },
+        {
+            "matricola": "00000002",
+            "name": "Paulo",
+            "email": "teste@gmail.com"
+        },
+        {
+            "matricola": "00000003",
+            "name": "Ricardo",
+            "email": "teste@gmail.com"
+        }
+    ]
+}
