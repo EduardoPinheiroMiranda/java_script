@@ -1,21 +1,22 @@
 .bodyShowList{
     width: 30rem;
     height: 45rem;
-
 }
+
 .student{
     color: var(--colorFont);
 
     width: 29rem;
-    height: 3rem;
-    padding: 2rem;
-
     margin: 0 auto;
 
+    padding: 0 1rem;
+}
+
+.primaryInfo{
+    height: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .name{
@@ -23,6 +24,11 @@
     overflow-x: hidden;
     height: 2rem;
     width: 17rem;
+}
+
+.name span{
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 .attributes{
@@ -49,4 +55,20 @@ svg:nth-child(2):hover{
 
 svg:nth-child(1):hover{
     fill: rgb(0, 174, 255);
+}
+
+.infoStudents{
+    font-size: 1.2rem;
+
+    transform: translateY(-3rem);
+    visibility: hidden;
+
+    transition: all 500ms;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+} 
+
+.showInfo{
+    transform: translateY(0);
+    visibility: visible;
 }

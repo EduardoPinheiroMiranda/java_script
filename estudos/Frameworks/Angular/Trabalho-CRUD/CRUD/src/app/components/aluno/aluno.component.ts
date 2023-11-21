@@ -11,17 +11,37 @@ import { StudentsService } from '../../services/students.service';
   templateUrl: './aluno.component.html',
   styleUrl: './aluno.component.css'
 })
+
+
 export class AlunoComponent {
   students: Students[] = []
-
-  constructor(private listEstudents: StudentsService){
+  index = 0
+  
+  constructor(private listStudents: StudentsService){
     this.loadData()
   }
 
   loadData(): void{
-    this.students = this.listEstudents.load()
+    this.students = this.listStudents.load()
+    //console.log(this.students)
   }
 
-  delite(matricola: string){}
+  delite(matricola: string){
+    this.listStudents.delite(matricola)
+    this.loadData()
+  }
+
+  update(matricola: string){
+    document.querySelector(".updateStudent")?.classList.add("moveright")
+    document.querySelector(".showStudents")?.classList.add("moveright")
+
+    this.listStudents.elementUpdate(matricola)
+  }
+
+  showInfo(index: Number): void{
+    const x = Number(index)
+    document.querySelectorAll(".infoStudents")[x].classList.add("showInfo")
+    
+  }
   
 }

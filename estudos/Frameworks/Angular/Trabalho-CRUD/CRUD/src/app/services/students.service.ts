@@ -4,8 +4,9 @@ import { Students } from '../Students';
 @Injectable({
   providedIn: 'root'
 })
+
 export class StudentsService {
-  students = [
+  students: Students[] = [
     {
       matricola: "00000001",
       name: "Eduardo",
@@ -24,11 +25,33 @@ export class StudentsService {
     
   ]
 
+  matricolaUpdate: string = ''
+
   constructor() { 
     this.load()
   }
 
-  load(): Students[]{
+  load(): Students[] {
     return this.students
+  }
+
+  loadUpdate(): string{
+    //console.log(this.matricolaUpdate)
+    return this.matricolaUpdate
+  }
+
+  addStudent(listStundents: Students[]){
+    this.students.push(listStundents[0])
+  }
+
+  delite(matricola: string){
+    this.students = this.students.filter(student => student.matricola !== matricola)
+  }
+
+  elementUpdate(matricola: string){
+    //recebe o numero da matricola e agrega ao matricolaUpdate, para ser 
+    //trabalahdo em outra função
+    this.matricolaUpdate = matricola
+    //console.log(this.matricolaUpdate)
   }
 }
