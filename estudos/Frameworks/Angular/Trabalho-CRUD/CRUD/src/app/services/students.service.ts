@@ -22,7 +22,11 @@ export class StudentsService {
       name: "Carlos",
       email: "Carlosteste@gmail.com"
     },
-    
+    {
+      matricola: "00000004",
+      name: "Carlos Serafim Nscimento Cruzd de de de ",
+      email: "Carlosteste@gmail.com"
+    },
   ]
 
   matricolaUpdate: string = ''

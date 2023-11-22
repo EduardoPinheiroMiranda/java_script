@@ -1,0 +1,15 @@
+<section>
+    <span>Adicionar aluno:</span>
+    <form class="info">
+        <label for="matricola">Número da matricula</label>
+        <input class="inputs" id="matricola" [(ngModel)]="matricola" name="matricola" type="text">
+
+        <label for="name">Nome do aluno:</label>
+        <input class="inputs" id="name" [(ngModel)]="name" name="name" type="text">
+
+        <label for="email">email:</label>
+        <input class="inputs" id="email" [(ngModel)]="email" name="email" type="text">
+
+        <button (click)="criar()" >Adicionar</button>
+    </form>
+</section>

@@ -40,8 +40,18 @@ export class AlunoComponent {
 
   showInfo(index: Number): void{
     const x = Number(index)
-    document.querySelectorAll(".infoStudents")[x].classList.add("showInfo")
+    const info = document.querySelectorAll(".infoStudents")
     
+    info.forEach((item)=>{
+      item.classList.remove("showInfo")
+    })
+
+    info[x].classList.add("showInfo")
+
+    setTimeout(()=>{
+      info[x].classList.remove("showInfo")
+    },10000)
   }
+  
   
 }

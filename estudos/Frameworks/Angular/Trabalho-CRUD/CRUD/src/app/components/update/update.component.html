@@ -1,0 +1,14 @@
+<section>
+    <p>Atualizar dados do aluno</p>
+    <p>Número da matricula: <span>{{matricola}}</span></p>
+    <div class="info">
+
+        <label for="name">Nome do aluno:</label>
+        <input (change)="loadupdate()" id="name" [(ngModel)]="newName" type="text">
+
+        <label for="email">email:</label>
+        <input id="email" [(ngModel)]="newEmail"type="text">
+
+        <button (click)="update()">Adicionar</button>
+    </div>
+</section>
