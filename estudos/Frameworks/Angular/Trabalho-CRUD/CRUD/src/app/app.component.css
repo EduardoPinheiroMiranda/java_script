@@ -73,15 +73,15 @@ div a{
     border-radius: 0.5rem;
     padding: 5px 3px;
 
-    overflow: hidden;
-    
+    overflow: hidden;    
 }
 
 .bodyshow{
     display: flex;
     gap: 5px;
 
-    transform: translateX(-31rem);
+    transform: translateX(-30.3rem);
+
 }
 
 .section{

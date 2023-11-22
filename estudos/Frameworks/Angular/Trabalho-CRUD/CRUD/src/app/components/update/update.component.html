@@ -1,14 +1,25 @@
 <section>
-    <p>Atualizar dados do aluno</p>
-    <p>Número da matricula: <span>{{matricola}}</span></p>
-    <div class="info">
+    <div class="update">
+        <p>Atualizar dados do aluno</p>
+        <p>Número da matricula: <span>{{matricola}}</span></p>
+        <div class="info">
 
-        <label for="name">Nome do aluno:</label>
-        <input (change)="loadupdate()" id="name" [(ngModel)]="newName" type="text">
+            <label for="name">Nome do aluno:</label>
+            <input id="name" [(ngModel)]="newName" type="text">
 
-        <label for="email">email:</label>
-        <input id="email" [(ngModel)]="newEmail"type="text">
+            <label for="email">email:</label>
+            <input id="email" [(ngModel)]="newEmail"type="text">
 
-        <button (click)="update()">Adicionar</button>
+            <button (click)="update()">Adicionar</button>
+        </div>
     </div>
+
+    <div class="alert">
+        <div>
+            <p>Realmente deseja alterar as informações deste aluno ?</p>
+            <button (click)="load()">Sim</button>
+            <button (click)="abort()">Não</button>
+        </div>
+    </div>
+    
 </section>

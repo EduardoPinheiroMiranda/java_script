@@ -12,7 +12,6 @@ import { StudentsService } from '../../services/students.service';
   styleUrl: './aluno.component.css'
 })
 
-
 export class AlunoComponent {
   students: Students[] = []
   index = 0
@@ -20,7 +19,7 @@ export class AlunoComponent {
   constructor(private listStudents: StudentsService){
     this.loadData()
   }
-
+  
   loadData(): void{
     this.students = this.listStudents.load()
     //console.log(this.students)
@@ -52,6 +51,5 @@ export class AlunoComponent {
       info[x].classList.remove("showInfo")
     },10000)
   }
-  
   
 }

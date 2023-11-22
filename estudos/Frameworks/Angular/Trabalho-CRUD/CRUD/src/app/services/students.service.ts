@@ -44,18 +44,33 @@ export class StudentsService {
     return this.matricolaUpdate
   }
 
-  addStudent(listStundents: Students[]){
-    this.students.push(listStundents[0])
-  }
-
-  delite(matricola: string){
-    this.students = this.students.filter(student => student.matricola !== matricola)
-  }
-
-  elementUpdate(matricola: string){
+  elementUpdate(matricola: string): void{
     //recebe o numero da matricola e agrega ao matricolaUpdate, para ser 
     //trabalahdo em outra função
     this.matricolaUpdate = matricola
     //console.log(this.matricolaUpdate)
+  }
+  
+  addStudent(listStundents: Students[]): void{
+    this.students.push(listStundents[0])
+  }
+
+  delite(matricola: string): void{
+    this.students = this.students.filter(student => student.matricola !== matricola)
+  }
+
+  updateStudents(update: Students[]): void{
+    this.students.forEach((stunde) => {
+      if(stunde.matricola === update[0].matricola){
+        stunde.email = update[0].email
+        stunde.name = update[0].name
+        
+        return
+      }
+    })
+  }
+
+  reset(): void{
+    this.matricolaUpdate = ""
   }
 }

@@ -5,6 +5,8 @@ import { AlunoComponent } from './components/aluno/aluno.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateComponent } from './components/update/update.component';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
+import { StudentsService } from './services/students.service';
+import { doesNotMatch } from 'assert';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +25,9 @@ import { CreateStudentComponent } from './components/create-student/create-stude
 export class AppComponent {
   title = 'CRUD';
 
+  constructor(private listStudent: StudentsService){
+
+  }
 
   addStundent(){
     document.querySelector(".showStudents")?.classList.add("moveleft")
@@ -37,5 +42,10 @@ export class AppComponent {
 
     document.querySelector(".showStudents")?.classList.remove("moveright")
     document.querySelector(".updateStudent")?.classList.remove("moveright")
+
+    setTimeout(() => {
+      document.querySelector(".alert")?.classList.remove("hide")
+    }, 1000)
+    
   }
 }
