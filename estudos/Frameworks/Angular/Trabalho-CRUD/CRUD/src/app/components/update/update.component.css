@@ -33,6 +33,7 @@ input{
     margin: 1rem 0 3rem;
 
     outline-color: rgb(96, 194, 194);
+    padding: 0 1rem;
 }
 
 button{
