@@ -1,9 +1,6 @@
 import http from "node:http"
 import { json } from "./middlewares/json.js"
-import { DataBase } from "./middlewares/Database.js"
-const users = []
-
-const dataBase = new DataBase()
+import { routes } from "./middlewares/routes.js"
 
 
 const server = http.createServer(async (req, res) => {
@@ -11,25 +8,15 @@ const server = http.createServer(async (req, res) => {
 
     await json(req, res)
 
-    if( method === "GET" && url ==="/users"){
-        const users = dataBase.select('users')
+    const route = routes.find(route => {
+        return route.method === method && route.path === url
+    })
 
-        return res.end(JSON.stringify(users))
+    if(route){
+        return route.handler(req, res)
     }
 
-    if( method === "POST" && url ==="/users"){
-        const { name, email} = req.body
-
-        const user = {
-            id: 1,
-            name: name,
-            email: email,
-        }
-        
-        dataBase.insert("users", user)
-
-        return res.writeHead(201).end()
-    }
+    
 
     return res.writeHead(404).end()
 })
