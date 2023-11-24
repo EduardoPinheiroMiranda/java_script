@@ -26,7 +26,7 @@ export class CreateStudentComponent {
   name: string = ""
   email: string = ""
 
-  criar(): void{
+  create(): void{
     if(this.matricola === "" || this.name === "" || this.email === ""){
       alert("Valores incompletos, preencha todos os campos para prosseguir")
     }
