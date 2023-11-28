@@ -9,12 +9,12 @@ export class StudentsService {
   students: Students[] = [
     {
       matricola: "00000001",
-      name: "Eduardo",
+      name: "Paulo",
       email: "eduardoteste@gmail.com"
     },
     {
       matricola: "00000002",
-      name: "Ricardo",
+      name: "João",
       email: "Ricardoteste@gmail.com"
     },
     {
@@ -24,7 +24,7 @@ export class StudentsService {
     },
     {
       matricola: "00000004",
-      name: "Carlos Serafim Nscimento Cruzd de de de ",
+      name: "Carlos Serafim Nscimento Cruz do Nascimento ",
       email: "Carlosteste@gmail.com"
     },
   ]

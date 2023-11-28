@@ -17,4 +17,4 @@ if(_env.success === false){
 	throw new Error('erro, environment variables!')
 }
 
-export const env = _env.data
+export const env = _env.data 
