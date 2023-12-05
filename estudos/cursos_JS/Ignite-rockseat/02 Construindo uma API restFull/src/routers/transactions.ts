@@ -6,6 +6,25 @@ import crypto from 'node:crypto'
 
 
 export async function transactionsRouter(app: FastifyInstance){
+
+	app.get('/', async () => {
+		const transactions  = await connectKnex('transactions').select('*')
+
+		return {transactions}
+	})
+
+	app.get('/:id', async (req) => {
+		const getTransactionParamsSchema = z.object({
+			id: z.string().uuid()
+		})
+
+		const { id } = getTransactionParamsSchema.parse(req.params)
+
+		const transaction = await connectKnex('transactions').where('id', id).first()
+
+		return { transaction }
+	})
+
 	app.post('/',async (request, reply) => {
     
 		const createTransactionBodySchema = z.object({
