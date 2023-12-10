@@ -1,3 +1,7 @@
 node_modules
-database/dbApp.db
+
+#ignorando o arquivo de banco de dados
+src/database/dbBase
+
+
 .env
