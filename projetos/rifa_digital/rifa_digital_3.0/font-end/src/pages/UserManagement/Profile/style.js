@@ -113,11 +113,7 @@ export const UserInfo = Styled.div`
         display: flex;
         align-items: center;
 
-
-
     }
-
-
 `
 
 export const Line = Styled.div`
