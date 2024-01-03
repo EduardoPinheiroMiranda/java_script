@@ -1,3 +1,3 @@
-import { configuracaoDeConeccao } from "./src/dataBase/ConeccaoDoBanco"
+import { configuracaoDeConexao } from "./src/dataBase/ConexaoDoBanco"
 
-export default configuracaoDeConeccao
+export default configuracaoDeConexao

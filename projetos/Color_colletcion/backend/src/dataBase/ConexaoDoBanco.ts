@@ -1,6 +1,6 @@
 import knex, { Knex } from "knex"
 
-export const configuracaoDeConeccao: Knex.Config = {
+export const configuracaoDeConexao: Knex.Config = {
 	client: "sqlite",
 	connection: {
 		filename: "./src/dataBase/BaseDeDados/color_collection.db"
@@ -12,4 +12,4 @@ export const configuracaoDeConeccao: Knex.Config = {
 	}
 }
 
-export const coneccaoDoBanco = knex(configuracaoDeConeccao)
+export const conexaoDoBanco = knex(configuracaoDeConexao)
