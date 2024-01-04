@@ -16,6 +16,7 @@ declare module "knex/types/tables" {
             name: string,
             category: string,
             favorite: string,
+            colors: string,
             foreignKey_IdUser: string,
         }
     }
