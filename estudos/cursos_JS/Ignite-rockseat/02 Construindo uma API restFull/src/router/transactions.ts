@@ -20,10 +20,10 @@ export async function transactionsRoutes(app: FastifyInstance){
 		const { id } = getTransactionParamsSchema.parse(request.params)
 		//serve como validador, se os ids são iguais.
 
-		const transaction = await knex('transactions').where('id', id).first()
+		const transactions = await knex('transactions').where('id', id).first()
 
 		return {
-			transaction,
+			transactions,
 		}
 	})
 

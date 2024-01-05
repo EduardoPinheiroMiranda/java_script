@@ -51,6 +51,9 @@ export async function paletasDeCores(app: FastifyInstance){
 
 		if(id === "*"){
 			paletas = await knex("pallets").select()
+			return {
+				paletas
+			}
 		}
 
 		paletas = await knex("pallets").select().where("category", id)
@@ -59,7 +62,9 @@ export async function paletasDeCores(app: FastifyInstance){
 			throw new Error("paleta não encontraa")
 		}
 
-		return {paletas}
+		return {
+			paletas
+		}
 	})
 
 }
