@@ -1,6 +1,7 @@
 import request from 'supertest'
 import { app } from '../src/app'
-import { afterAll, beforeAll, describe, test} from 'vitest'
+import { afterAll, beforeAll, beforeEach, expect describe ,test} from 'vitest'
+import { execSync } from 'child_process'
 
 describe('Transactions router', () => {
 	beforeAll( async() => {
@@ -10,6 +11,12 @@ describe('Transactions router', () => {
 	afterAll( async () => {
 		await app.close()
 	})
+	
+	beforeEach(async () => {
+		execSync('npm run knex -- migrate:rollback --all')
+		execSync('npm run knex -- migrate:latest')
+	})
+
     
 	test('o usuário consegue cria uma transação', async () => {
 		await request(app.server)
@@ -32,18 +39,13 @@ describe('Transactions router', () => {
 				type: 'credit'
 			})
 
-		// const listaDeTransacoes = await request(app.server)
-		// 	.get('/transactions')
-		// 	.expect(200)
+		await request(app.server)
+			.get('/transactions')
+			.expect(200)
 
-		//  expect(listaDeTransacoes.body.transactions).toEqual({
-		// 	transaction: [
-		// 		expect.objectContaining({
-		// 			title: 'Transação de compra de carro',
-		// 			amount: 6000000,
-		// 		})
-		// 	]
-		// })
+		expect(listaDeTransacoes.body.transactions).toEqual([
+
+		])
 		//console.log(listagemDeTransacoes.body.transactions)
 	})
     
