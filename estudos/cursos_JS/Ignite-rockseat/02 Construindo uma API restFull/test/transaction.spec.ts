@@ -1,6 +1,6 @@
 import request from 'supertest'
 import { app } from '../src/app'
-import { afterAll, beforeAll, beforeEach, expect describe ,test} from 'vitest'
+import { afterAll, beforeAll, beforeEach, expect, describe ,test} from 'vitest'
 import { execSync } from 'child_process'
 
 describe('Transactions router', () => {
@@ -39,14 +39,17 @@ describe('Transactions router', () => {
 				type: 'credit'
 			})
 
-		await request(app.server)
+		const listaDeTrasancoes = await request(app.server)
 			.get('/transactions')
 			.expect(200)
 
-		expect(listaDeTransacoes.body.transactions).toEqual([
-
+		//expect(listaDeTrasancoes.body.transaction).toEqual()
+		expect(listaDeTrasancoes.body.transactions).toEqual([
+			expect.objectContaining({
+				title: 'Transação de compra de carro',
+				amount: 6000000,
+			})
 		])
-		//console.log(listagemDeTransacoes.body.transactions)
 	})
     
 })
