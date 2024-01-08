@@ -1,8 +1,12 @@
+#Dependencias
 node_modules
 
 #ignorando o arquivo de banco de dados
-src/database/dbBase
+src/database/*.db
 
-
+#variaveis de ambiente
 .env
 .env.test
+
+#build 
+build

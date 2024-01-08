@@ -43,7 +43,6 @@ describe('Transactions router', () => {
 			.get('/transactions')
 			.expect(200)
 
-		//expect(listaDeTrasancoes.body.transaction).toEqual()
 		expect(listaDeTrasancoes.body.transactions).toEqual([
 			expect.objectContaining({
 				title: 'Transação de compra de carro',
