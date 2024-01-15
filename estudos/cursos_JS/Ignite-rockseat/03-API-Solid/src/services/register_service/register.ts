@@ -1,5 +1,5 @@
-import { EmailExistente } from "../Errors/EmailExistenti"
-import { UserRegisterRepository } from "../repository/interface"
+import { EmailExistente } from "../../Errors/EmailExistenti"
+import { UserRegisterRepository } from "../../repository/interface"
 import { hash } from "bcryptjs"
 
 interface users{
@@ -16,18 +16,21 @@ export class RegisterUser{
 		
 		const password_hash = await hash(password, 6)
             
-		const user = await this.userRepository.findByEmail(email)
+		const _user = await this.userRepository.findByEmail(email)
 
-		if(user){
+		if(_user){
 			throw new EmailExistente()
 		}
 		
-		await this.userRepository.create({
+		const user = await this.userRepository.create({
 			name,
 			email,
 			password_hash
 		})
 		
+		return { 
+			user,
+		}
 	}
 
 }

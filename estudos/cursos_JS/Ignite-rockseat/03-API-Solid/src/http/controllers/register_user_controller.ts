@@ -2,7 +2,7 @@ import { FastifyRequest, FastifyReply} from "fastify"
 
 
 import { z } from "zod"
-import { RegisterUser } from "@/src/services/register"
+import { RegisterUser } from "@/src/services/register_service/register"
 import { RegisterUser_repo } from "@/src/repository/prisma/register"
 import { EmailExistente } from "@/src/Errors/EmailExistenti"
 
