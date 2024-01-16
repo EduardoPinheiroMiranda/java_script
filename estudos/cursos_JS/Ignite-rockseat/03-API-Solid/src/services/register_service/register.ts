@@ -1,6 +1,6 @@
 import { EmailExistente } from "../../Errors/EmailExistenti"
 import { UserRegisterRepository } from "../../repository/interface"
-import { hash } from "bcryptjs"
+import Bcrypt from "bcryptjs"
 
 interface users{
     name: string,
@@ -14,7 +14,7 @@ export class RegisterUser{
 	async register({name, email, password}: users){
 
 		
-		const password_hash = await hash(password, 6)
+		const password_hash = await Bcrypt.hash(password, 6)
             
 		const _user = await this.userRepository.findByEmail(email)
 

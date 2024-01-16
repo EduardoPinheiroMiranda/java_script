@@ -1,10 +1,8 @@
 import { FastifyRequest, FastifyReply} from "fastify"
 
-
 import { z } from "zod"
-import { RegisterUser } from "@/src/services/register_service/register"
-import { RegisterUser_repo } from "@/src/repository/prisma/register"
 import { EmailExistente } from "@/src/Errors/EmailExistenti"
+import { makeRegisterUseCase } from "@/src/factory/make-register-use-case"
 
 export async function register(request: FastifyRequest, reply: FastifyReply){
 
@@ -17,8 +15,7 @@ export async function register(request: FastifyRequest, reply: FastifyReply){
 	const {name, email, password} = padraoDeDadosValidos.parse(request.body)
 
 	try{
-		const prismaRepository = new RegisterUser_repo()
-		const registerUser = new RegisterUser(prismaRepository)
+		const registerUser = makeRegisterUseCase()
 
 		await registerUser.register({
 			name,

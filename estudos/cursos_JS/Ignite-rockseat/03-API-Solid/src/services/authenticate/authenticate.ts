@@ -1,6 +1,6 @@
 import { ErroCredenciaisInvalidas } from "@/src/Errors/AutenticacaoDeCredenciais"
 import { UserRegisterRepository } from "@/src/repository/interface"
-import { compare } from "bcryptjs"
+import Bcrypt from "bcryptjs"
 interface AuthenticateUseCaseRequest{
     email: string,
     password: string
@@ -22,12 +22,14 @@ export class AuthenticateUser{
 			throw new ErroCredenciaisInvalidas()
 		}
  
-		const AsSenhasSaoIguais = await compare(password, user.password_hash)
+		const AsSenhasSaoIguais = await Bcrypt.compare(password, user.password_hash)
 
 		if(!AsSenhasSaoIguais){
 			throw new ErroCredenciaisInvalidas()
 		}
 
-		return {user}
+		return {
+			user,
+		}
 	}
 }

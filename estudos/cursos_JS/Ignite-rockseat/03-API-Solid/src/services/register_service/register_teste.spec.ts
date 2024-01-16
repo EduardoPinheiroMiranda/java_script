@@ -1,15 +1,22 @@
-import { expect, describe, it } from "vitest"
+import { expect, describe, it, beforeEach } from "vitest"
 import { RegisterUser } from "./register"
 import { TestInMemory } from "@/src/repository/teste_in_memory/test_in_memory" 
 import { compare } from "bcryptjs"
 import { EmailExistente } from "@/src/Errors/EmailExistenti"
 
+
+let testInMemory: TestInMemory
+let registerUser: RegisterUser
+	
 describe("register", () => {
 
+	beforeEach(() => {
+		testInMemory = new TestInMemory()
+		registerUser = new RegisterUser(testInMemory)
+	})
+
 	it("o valor da senha deve ser um hash", async () => {
-        
-		const testInMemory = new TestInMemory()
-		const registerUser = new RegisterUser(testInMemory)
+    
 
 		const { user } = await registerUser.register({
 			name: "eduardo",
@@ -24,9 +31,6 @@ describe("register", () => {
 	})
 
 	it("O email já existe", async () => {
-
-		const testInMemory = new TestInMemory()
-		const registerUser = new RegisterUser(testInMemory)
 
 		await registerUser.register({
 			name: "eduardo",
@@ -44,9 +48,6 @@ describe("register", () => {
 	})
 
 	it("O cadastro do usuário está valido", async () => {
-
-		const testInMemory = new TestInMemory()
-		const registerUser = new RegisterUser(testInMemory)
 
 		const {user} = await registerUser.register({
 			name: "eduardo",
