@@ -4,5 +4,8 @@ node_modules
 #Build 
 dist
 
+#teste
+coverage
+
 #old_code
 old_code

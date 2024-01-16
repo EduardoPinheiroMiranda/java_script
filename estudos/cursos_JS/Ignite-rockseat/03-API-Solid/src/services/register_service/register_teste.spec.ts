@@ -34,7 +34,7 @@ describe("register", () => {
 			password: "123456"
 		})
 
-		expect(
+		await expect(
 			() => registerUser.register({
 				name: "eduardo",
 				email: "testeunitario@gmail.com",
