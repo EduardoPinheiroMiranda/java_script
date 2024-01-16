@@ -1,11 +1,15 @@
 import { ErroCredenciaisInvalidas } from "@/src/Errors/AutenticacaoDeCredenciais"
 import { UserRegisterRepository } from "@/src/repository/interface"
 import Bcrypt from "bcryptjs"
+import { User } from "@prisma/client"
+
 interface AuthenticateUseCaseRequest{
     email: string,
     password: string
 }
-interface AuthenticateUsserCaseResponse{}
+interface AuthenticateUsserCaseResponse{
+	user: User
+}
 
 export class AuthenticateUser{
 
